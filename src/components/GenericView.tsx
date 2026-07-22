@@ -11,64 +11,79 @@ export const GenericView: React.FC<GenericViewProps> = ({ title, description }) 
     <div className="space-y-4 pb-8 text-slate-800">
       
       {/* Quick Action Cards Bar */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
-        <div className="bg-white rounded-xl p-3.5 border border-slate-100 shadow-xs flex items-center justify-between">
-          <div>
-            <h4 className="text-xs font-bold text-[#303e67]">Important Links</h4>
-            <span className="text-[10px] font-bold text-gray-500 hover:text-blue-600 cursor-pointer underline mt-1 block">
-              CLICK HERE
-            </span>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        {/* Important Links */}
+        <div className="bg-white rounded-[14px] px-[20px] py-[18px] shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition-shadow h-[96px] font-['Segoe_UI',sans-serif]">
+          <div className="flex flex-col justify-center">
+            <h6 className="text-[15.5px] font-bold text-[#1f355c] leading-tight tracking-tight">Important Links</h6>
+            <div className="mt-[6px]">
+              <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
+                CLICK HERE
+              </span>
+            </div>
           </div>
-          <div className="w-10 h-10 rounded-xl bg-sky-100/70 text-sky-600 flex items-center justify-center flex-shrink-0">
-            <ExternalLink className="w-5 h-5" />
-          </div>
-        </div>
-
-        <div className="bg-white rounded-xl p-3.5 border border-slate-100 shadow-xs flex items-center justify-between">
-          <div>
-            <h4 className="text-xs font-bold text-[#303e67]">Student Facilitation</h4>
-            <span className="text-[10px] font-bold text-gray-500 hover:text-purple-600 cursor-pointer underline mt-1 block">
-              CLICK TO VIEW
-            </span>
-          </div>
-          <div className="w-10 h-10 rounded-xl bg-purple-100/70 text-purple-600 flex items-center justify-center flex-shrink-0">
-            <PlayCircle className="w-5 h-5" />
+          <div className="w-[44px] h-[44px] rounded-[10px] bg-[#eef6ff] text-[#0066ff] flex items-center justify-center flex-shrink-0">
+            <ExternalLink className="w-[22px] h-[22px] stroke-[2]" />
           </div>
         </div>
 
-        <div className="bg-white rounded-xl p-3.5 border border-slate-100 shadow-xs flex items-center justify-between">
-          <div>
-            <h4 className="text-xs font-bold text-[#303e67]">Anti Ragging</h4>
-            <span className="text-[10px] font-bold text-gray-500 hover:text-indigo-600 cursor-pointer underline mt-1 block">
-              READ NOW
-            </span>
+        {/* Student Facilitation */}
+        <div className="bg-white rounded-[14px] px-[20px] py-[18px] shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition-shadow h-[96px] font-['Segoe_UI',sans-serif]">
+          <div className="flex flex-col justify-center">
+            <h6 className="text-[15.5px] font-bold text-[#1f355c] leading-tight tracking-tight">Student Facilitation</h6>
+            <div className="mt-[6px]">
+              <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
+                CLICK TO VIEW
+              </span>
+            </div>
           </div>
-          <div className="w-10 h-10 rounded-xl bg-indigo-100/70 text-indigo-600 flex items-center justify-center flex-shrink-0">
-            <XCircle className="w-5 h-5" />
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-r from-[#174872] to-[#115488] rounded-xl p-3.5 text-white shadow-xs flex items-center justify-between">
-          <div>
-            <h4 className="text-xs font-bold text-white tracking-wide">CU LMS</h4>
-            <span className="text-[10px] font-bold text-sky-200 cursor-pointer underline mt-1 block">
-              CLICK HERE
-            </span>
-          </div>
-          <div className="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center flex-shrink-0">
-            <GraduationCap className="w-6 h-6" />
+          <div className="w-[44px] h-[44px] rounded-[10px] bg-[#f5ecf7] text-[#9c27b0] flex items-center justify-center flex-shrink-0">
+            <PlayCircle className="w-[22px] h-[22px] stroke-[2]" />
           </div>
         </div>
 
-        <div className="bg-white rounded-xl p-3.5 border border-slate-100 shadow-xs flex items-center justify-between">
-          <div>
-            <h4 className="text-xs font-bold text-[#303e67]">My University Email</h4>
-            <span className="text-[10px] font-bold text-gray-500 hover:text-blue-600 cursor-pointer underline mt-1 block">
-              VIEW DETAILS
-            </span>
+        {/* Anti Ragging */}
+        <div className="bg-white rounded-[14px] px-[20px] py-[18px] shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition-shadow h-[96px] font-['Segoe_UI',sans-serif]">
+          <div className="flex flex-col justify-center">
+            <h6 className="text-[15.5px] font-bold text-[#1f355c] leading-tight tracking-tight">Anti Ragging</h6>
+            <div className="mt-[6px]">
+              <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
+                READ NOW
+              </span>
+            </div>
           </div>
-          <div className="w-10 h-10 rounded-xl bg-sky-100/70 text-sky-600 flex items-center justify-center flex-shrink-0">
-            <Mail className="w-5 h-5" />
+          <div className="w-[44px] h-[44px] rounded-[10px] bg-[#eff0fa] text-[#5c4cfc] flex items-center justify-center flex-shrink-0">
+            <XCircle className="w-[22px] h-[22px] stroke-[2]" />
+          </div>
+        </div>
+
+        {/* CU LMS */}
+        <div className="bg-[#204a74] rounded-[14px] px-[20px] py-[18px] shadow-sm border-2 border-[#00d05a] flex items-center justify-between hover:brightness-105 transition-all h-[96px] font-['Segoe_UI',sans-serif]">
+          <div className="flex flex-col justify-center">
+            <h6 className="text-[15.5px] font-bold text-white leading-tight tracking-tight">CU LMS</h6>
+            <div className="mt-[6px]">
+              <span className="inline-block border-b-[2px] border-white/50 text-[11px] font-semibold uppercase text-white pb-0.5 tracking-wide">
+                CLICK HERE
+              </span>
+            </div>
+          </div>
+          <div className="flex items-center justify-center flex-shrink-0 mr-1 opacity-90">
+            <GraduationCap className="w-[32px] h-[32px] text-white stroke-[1.5]" />
+          </div>
+        </div>
+
+        {/* My University Email */}
+        <div className="bg-white rounded-[14px] px-[20px] py-[18px] shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition-shadow h-[96px] font-['Segoe_UI',sans-serif]">
+          <div className="flex flex-col justify-center">
+            <h6 className="text-[15.5px] font-bold text-[#1f355c] leading-tight tracking-tight">My University Email</h6>
+            <div className="mt-[6px]">
+              <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
+                VIEW DETAILS
+              </span>
+            </div>
+          </div>
+          <div className="w-[44px] h-[44px] rounded-[10px] bg-[#eef6ff] text-[#0066ff] flex items-center justify-center flex-shrink-0">
+            <Mail className="w-[22px] h-[22px] stroke-[2]" />
           </div>
         </div>
       </div>
