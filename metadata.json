@@ -1,0 +1,6 @@
+{
+  "name": "CUIMS - Chandigarh University Student Portal",
+  "description": "Exact CUIMS Student Information Management System frontend replica featuring student course attendance, hostel management details, and downloadable Virtual ID Card.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
