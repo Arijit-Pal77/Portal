@@ -110,122 +110,45 @@ export const ProfileView: React.FC = () => {
       <div className="space-y-6">
 
         {/* SECTION 1: STUDENT PERSONAL INFORMATION */}
-        <div>
+        <div className="font-['Arial',sans-serif]">
           {/* Section Pill Badge */}
-          <div className="inline-block bg-[#324b72] text-white text-[10px] font-extrabold px-3 py-1 rounded-md uppercase tracking-wider mb-2 shadow-2xs">
+          <div className="inline-block bg-[#4b559b] text-white text-[11.5px] font-bold px-3.5 py-[5px] rounded-[4px] uppercase tracking-wide mb-[3px]">
             STUDENT PERSONAL INFORMATION
           </div>
 
-          <div className="bg-white border border-slate-200 rounded-lg p-5 shadow-2xs">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <div className="bg-white border border-slate-200/80 rounded-[4px] p-[20px] shadow-[0_0_15px_4px_rgba(0,0,0,0.02)]">
+            <div className="flex flex-col lg:flex-row justify-between gap-6">
               
-              {/* Fields Grid (9 or 10 cols) */}
-              <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-xs">
-                
-                {/* Col 1 */}
-                <div className="space-y-2">
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">UID</span>
-                    <span className="col-span-7 font-medium text-slate-900">: {studentData.id}</span>
-                  </div>
-
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">Name</span>
-                    <span className="col-span-7 font-bold text-slate-900">: {studentData.name}</span>
-                  </div>
-
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">Father's Name</span>
-                    <span className="col-span-7 font-medium text-slate-900">: {studentData.fatherName}</span>
-                  </div>
-
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">Mother's Name</span>
-                    <span className="col-span-7 font-medium text-slate-900">: {studentData.motherName}</span>
-                  </div>
-
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">Religion</span>
-                    <span className="col-span-7 font-medium text-slate-900">: {studentData.religion}</span>
-                  </div>
-
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">D.O.B.</span>
-                    <span className="col-span-7 font-medium text-slate-900">: {studentData.dob}</span>
-                  </div>
-
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">Admission Year</span>
-                    <span className="col-span-7 font-medium text-slate-900">: {studentData.admissionYear}</span>
-                  </div>
-
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">University</span>
-                    <span className="col-span-7 font-medium text-slate-900">: {studentData.university}</span>
-                  </div>
-                </div>
-
-                {/* Col 2 */}
-                <div className="space-y-2">
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">Current Semester</span>
-                    <span className="col-span-7 font-medium text-slate-900">: {studentData.currentSemester}</span>
-                  </div>
-
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">Blood Group</span>
-                    <span className="col-span-7 font-medium text-slate-900">: {studentData.bloodGroup}</span>
-                  </div>
-
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">Current Section</span>
-                    <span className="col-span-7 font-medium text-slate-900">: {studentData.currentSection}</span>
-                  </div>
-
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">Program Code</span>
-                    <span className="col-span-7 font-medium text-slate-900">: {studentData.programCode}</span>
-                  </div>
-
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">Student Status</span>
-                    <span className="col-span-7 font-medium text-slate-900">: {studentData.studentStatus}</span>
-                  </div>
-
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">Cast</span>
-                    <span className="col-span-7 font-medium text-slate-900">: {studentData.caste}</span>
-                  </div>
-
-                  <div className="grid grid-cols-12">
-                    <span className="col-span-5 font-bold text-slate-800">Address</span>
-                    <span className="col-span-7 font-medium text-slate-900 leading-tight">
-                      : {studentData.fullAddress}
-                    </span>
-                  </div>
-                </div>
-
+              {/* Left Column (8 items) */}
+              <div className="flex-[0.95] space-y-[11px] text-[13.5px]">
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">UID</div><div className="flex-1 text-[#444] uppercase">{studentData.id}</div></div>
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">Name</div><div className="flex-1 text-[#444] uppercase">{studentData.name}</div></div>
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">Father's Name</div><div className="flex-1 text-[#444] uppercase">{studentData.fatherName}</div></div>
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">Mother Name</div><div className="flex-1 text-[#444] uppercase">{studentData.motherName}</div></div>
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">Religion</div><div className="flex-1 text-[#444]">{studentData.religion}</div></div>
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">D.O.B.</div><div className="flex-1 text-[#444]">{studentData.dob}</div></div>
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">Admission Year</div><div className="flex-1 text-[#444]">{studentData.admissionYear}</div></div>
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">University</div><div className="flex-1 text-[#444] uppercase">{studentData.university}</div></div>
               </div>
 
-              {/* Photo Box Column (3 cols) */}
-              <div className="lg:col-span-3 flex flex-col items-center lg:items-end space-y-2">
-                <input 
-                  type="file" 
-                  ref={fileInputRef} 
-                  onChange={handlePhotoUpload} 
-                  accept="image/*" 
-                  className="hidden" 
-                  id="profile-photo-file-input"
-                />
-                <div 
-                  className="w-32 h-40 border-2 border-black rounded-lg overflow-hidden bg-gray-100 p-0.5 shadow-2xs relative"
-                  id="profile-student-photo-box"
-                >
-                  <img 
-                    src={photo} 
-                    alt={studentData.name} 
-                    className="w-full h-full object-cover rounded-md"
-                  />
+              {/* Middle Column (7 items) */}
+              <div className="flex-[1.3] space-y-[11px] text-[13.5px]">
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">Current Semester</div><div className="flex-1 text-[#444]">{studentData.currentSemester}</div></div>
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">Blood Group</div><div className="flex-1 text-[#444] uppercase">{studentData.bloodGroup}</div></div>
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">Current Section</div><div className="flex-1 text-[#444] uppercase">{studentData.currentSection}</div></div>
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">Program Code</div><div className="flex-1 text-[#444]">{studentData.programCode}</div></div>
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">Student Status</div><div className="flex-1 text-[#444] uppercase">{studentData.studentStatus}</div></div>
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">Cast</div><div className="flex-1 text-[#444] uppercase">{studentData.caste}</div></div>
+                <div className="flex"><div className="w-[140px] font-bold text-[#333]">Address</div><div className="flex-1 text-[#444] uppercase leading-tight pr-4">{studentData.fullAddress}</div></div>
+              </div>
+
+              {/* Right Column - Photo */}
+              <div className="w-[100px] flex-shrink-0 flex justify-end items-start">
+                <div className="relative cursor-pointer group" onClick={() => document.getElementById('profile-photo-file-input')?.click()}>
+                  <input type="file" ref={fileInputRef} onChange={handlePhotoUpload} accept="image/*" className="hidden" id="profile-photo-file-input"/>
+                  <div className="w-[100px] h-[125px] border-[1.5px] border-black border-r-[12px] rounded-[6px] overflow-hidden bg-white">
+                    <img src={photo} alt={studentData.name} className="w-full h-full object-cover"/>
+                  </div>
                 </div>
               </div>
 
