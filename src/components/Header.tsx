@@ -52,10 +52,10 @@ export const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onOpenProfile, 
           <input 
             type="text" 
             placeholder="Search & Bookmark your page"
-            className="w-full bg-[#f0f2f5] text-gray-700 text-xs py-2 pl-4 pr-10 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 focus:bg-white transition-all border border-transparent focus:border-blue-200"
+            className="w-full bg-[#f1f1f1] text-[#333333] placeholder-[#5f7596] text-[14px] font-['Arial',sans-serif] py-2.5 pl-5 pr-12 rounded-full focus:outline-none transition-all border-none"
             id="global-search-input"
           />
-          <Search className="w-4 h-4 text-gray-500 absolute right-3.5 top-2.5 pointer-events-none" />
+          <Search className="w-[18px] h-[18px] text-[#555555] stroke-[2.5] absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
         </div>
       </div>
 
