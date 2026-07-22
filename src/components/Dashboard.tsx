@@ -52,79 +52,79 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
     <div className="space-y-4 pb-8 text-slate-800">
 
       {/* Top 5 Quick Action Cards Row - Matching exact CUIMS CSS specifications from HomeNewStyle.css */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
         {/* Important Links */}
-        <div className="bg-white rounded-[10px] p-[20px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border border-slate-200/60 flex items-center justify-between hover:shadow-md transition-shadow min-h-[112px] font-['Segoe_UI',sans-serif]">
+        <div className="bg-white rounded-[12px] p-[24px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border border-slate-200/60 flex items-center justify-between hover:shadow-md transition-shadow min-h-[130px] font-['Segoe_UI',sans-serif]">
           <div className="flex flex-col justify-between h-full">
-            <h6 className="text-[16px] font-semibold text-[#354781] leading-tight m-0 p-0">Important Links</h6>
+            <h6 className="text-[17px] font-bold text-[#354781] leading-tight m-0 p-0">Important Links</h6>
             <div>
-              <small className="mt-[15px] inline-block border-b-2 border-[#DDD] text-[12px] font-normal uppercase text-[#333333]">
+              <small className="mt-[20px] inline-block border-b-[2.5px] border-[#DDD] text-[12px] font-semibold uppercase text-[#333333]">
                 CLICK HERE
               </small>
             </div>
           </div>
-          <div className="w-[40px] h-[40px] rounded-[6px] bg-[#E5F3FE] text-[#1976d2] flex items-center justify-center flex-shrink-0 ml-2">
-            <ExternalLink className="w-[22px] h-[22px]" />
+          <div className="w-[52px] h-[52px] rounded-[8px] bg-[#E5F3FE] text-[#1976d2] flex items-center justify-center flex-shrink-0 ml-2">
+            <ExternalLink className="w-[26px] h-[26px]" />
           </div>
         </div>
 
         {/* Student Facilitation */}
-        <div className="bg-white rounded-[10px] p-[20px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border border-slate-200/60 flex items-center justify-between hover:shadow-md transition-shadow min-h-[112px] font-['Segoe_UI',sans-serif]">
+        <div className="bg-white rounded-[12px] p-[24px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border border-slate-200/60 flex items-center justify-between hover:shadow-md transition-shadow min-h-[130px] font-['Segoe_UI',sans-serif]">
           <div className="flex flex-col justify-between h-full">
-            <h6 className="text-[16px] font-semibold text-[#354781] leading-tight m-0 p-0">Student Facilitation</h6>
+            <h6 className="text-[17px] font-bold text-[#354781] leading-tight m-0 p-0">Student Facilitation</h6>
             <div>
-              <small className="mt-[15px] inline-block border-b-2 border-[#DDD] text-[12px] font-normal uppercase text-[#333333]">
+              <small className="mt-[20px] inline-block border-b-[2.5px] border-[#DDD] text-[12px] font-semibold uppercase text-[#333333]">
                 CLICK TO VIEW
               </small>
             </div>
           </div>
-          <div className="w-[40px] h-[40px] rounded-[6px] bg-[#f2e8f8] text-[#9c27b0] flex items-center justify-center flex-shrink-0 ml-2">
-            <PlayCircle className="w-[22px] h-[22px]" />
+          <div className="w-[52px] h-[52px] rounded-[8px] bg-[#f2e8f8] text-[#9c27b0] flex items-center justify-center flex-shrink-0 ml-2">
+            <PlayCircle className="w-[26px] h-[26px]" />
           </div>
         </div>
 
         {/* Anti Ragging */}
-        <div className="bg-white rounded-[10px] p-[20px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border border-slate-200/60 flex items-center justify-between hover:shadow-md transition-shadow min-h-[112px] font-['Segoe_UI',sans-serif]">
+        <div className="bg-white rounded-[12px] p-[24px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border border-slate-200/60 flex items-center justify-between hover:shadow-md transition-shadow min-h-[130px] font-['Segoe_UI',sans-serif]">
           <div className="flex flex-col justify-between h-full">
-            <h6 className="text-[16px] font-semibold text-[#354781] leading-tight m-0 p-0">Anti Ragging</h6>
+            <h6 className="text-[17px] font-bold text-[#354781] leading-tight m-0 p-0">Anti Ragging</h6>
             <div>
-              <small className="mt-[15px] inline-block border-b-2 border-[#DDD] text-[12px] font-normal uppercase text-[#333333]">
+              <small className="mt-[20px] inline-block border-b-[2.5px] border-[#DDD] text-[12px] font-semibold uppercase text-[#333333]">
                 READ NOW
               </small>
             </div>
           </div>
-          <div className="w-[40px] h-[40px] rounded-[6px] bg-[#ede7f6] text-[#673ab7] flex items-center justify-center flex-shrink-0 ml-2">
-            <XCircle className="w-[22px] h-[22px]" />
+          <div className="w-[52px] h-[52px] rounded-[8px] bg-[#ede7f6] text-[#673ab7] flex items-center justify-center flex-shrink-0 ml-2">
+            <XCircle className="w-[26px] h-[26px]" />
           </div>
         </div>
 
         {/* CU LMS */}
-        <div className="bg-[#214a72] rounded-[10px] p-[20px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border-2 border-[#00c853] flex items-center justify-between hover:brightness-105 transition-all min-h-[112px] font-['Segoe_UI',sans-serif]">
+        <div className="bg-[#1f456e] rounded-[12px] p-[24px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border-[2.5px] border-[#00b0ff] flex items-center justify-between hover:brightness-105 transition-all min-h-[130px] font-['Segoe_UI',sans-serif]">
           <div className="flex flex-col justify-between h-full">
-            <h6 className="text-[16px] font-semibold text-white leading-tight m-0 p-0">CU LMS</h6>
+            <h6 className="text-[17px] font-bold text-white leading-tight m-0 p-0">CU LMS</h6>
             <div>
-              <small className="mt-[15px] inline-block border-b-2 border-white/50 text-[12px] font-normal uppercase text-sky-100">
+              <small className="mt-[20px] inline-block border-b-[2.5px] border-white/50 text-[12px] font-semibold uppercase text-sky-100">
                 CLICK HERE
               </small>
             </div>
           </div>
-          <div className="w-[40px] h-[40px] rounded-[6px] bg-white/10 text-white flex items-center justify-center flex-shrink-0 ml-2">
-            <GraduationCap className="w-[22px] h-[22px] stroke-[1.75]" />
+          <div className="w-[52px] h-[52px] rounded-[8px] bg-white/15 text-white flex items-center justify-center flex-shrink-0 ml-2">
+            <GraduationCap className="w-[26px] h-[26px] stroke-[2]" />
           </div>
         </div>
 
         {/* My University Email */}
-        <div className="bg-white rounded-[10px] p-[20px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border border-slate-200/60 flex items-center justify-between hover:shadow-md transition-shadow min-h-[112px] font-['Segoe_UI',sans-serif]">
+        <div className="bg-white rounded-[12px] p-[24px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border border-slate-200/60 flex items-center justify-between hover:shadow-md transition-shadow min-h-[130px] font-['Segoe_UI',sans-serif]">
           <div className="flex flex-col justify-between h-full">
-            <h6 className="text-[16px] font-semibold text-[#354781] leading-tight m-0 p-0">My University Email</h6>
+            <h6 className="text-[17px] font-bold text-[#354781] leading-tight m-0 p-0">My University Email</h6>
             <div>
-              <small className="mt-[15px] inline-block border-b-2 border-[#DDD] text-[12px] font-normal uppercase text-[#333333]">
+              <small className="mt-[20px] inline-block border-b-[2.5px] border-[#DDD] text-[12px] font-semibold uppercase text-[#333333]">
                 VIEW DETAILS
               </small>
             </div>
           </div>
-          <div className="w-[40px] h-[40px] rounded-[6px] bg-[#E5F3FE] text-[#1976d2] flex items-center justify-center flex-shrink-0 ml-2">
-            <Mail className="w-[22px] h-[22px]" />
+          <div className="w-[52px] h-[52px] rounded-[8px] bg-[#E5F3FE] text-[#1976d2] flex items-center justify-center flex-shrink-0 ml-2">
+            <Mail className="w-[26px] h-[26px]" />
           </div>
         </div>
       </div>
