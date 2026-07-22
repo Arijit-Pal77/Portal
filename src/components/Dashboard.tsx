@@ -51,81 +51,91 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
   return (
     <div className="space-y-4 pb-8 text-slate-800">
 
-      {/* Top 5 Quick Action Cards Row - Matching exact CUIMS CSS specifications from HomeNewStyle.css */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      {/* Top 5 Quick Action Cards Row - Matching exact CUIMS CSS specifications and DOM structure */}
+      <div id="short_links" className="shortLinks flex flex-wrap gap-y-4 -mx-2 mb-2">
         {/* Important Links */}
-        <div className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif]">
-          <div className="flex flex-col justify-center">
-            <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">Important Links</h6>
-            <div className="mt-[6px]">
-              <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
-                CLICK HERE
-              </span>
+        <div id="div_top_1" className="w-1/2 sm:w-1/3 lg:w-1/5 px-2 col-sm-2 col-xs-6 padd-r-0 shortLinks__item">
+          <a href="#" className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
+            <div className="flex flex-col justify-center">
+              <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">Important Links</h6>
+              <div className="mt-[6px]">
+                <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
+                  CLICK HERE
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="w-[44px] h-[44px] rounded-[10px] bg-[#eef6ff] text-[#0066ff] flex items-center justify-center flex-shrink-0">
-            <ExternalLink className="w-[22px] h-[22px] stroke-[2]" />
-          </div>
+            <div className="w-[44px] h-[44px] rounded-[10px] bg-[#eef6ff] text-[#0066ff] flex items-center justify-center flex-shrink-0">
+              <ExternalLink className="w-[22px] h-[22px] stroke-[2]" />
+            </div>
+          </a>
         </div>
 
         {/* Student Facilitation */}
-        <div className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif]">
-          <div className="flex flex-col justify-center">
-            <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">Student Facilitation</h6>
-            <div className="mt-[6px]">
-              <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
-                CLICK TO VIEW
-              </span>
+        <div id="div_top_3" className="w-1/2 sm:w-1/3 lg:w-1/5 px-2 col-sm-2 col-xs-6 padd-r-0 shortLinks__item">
+          <a href="#" className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
+            <div className="flex flex-col justify-center">
+              <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">Student Facilitation</h6>
+              <div className="mt-[6px]">
+                <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
+                  CLICK TO VIEW
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="w-[44px] h-[44px] rounded-[10px] bg-[#f5ecf7] text-[#9c27b0] flex items-center justify-center flex-shrink-0">
-            <PlayCircle className="w-[22px] h-[22px] stroke-[2]" />
-          </div>
+            <div className="w-[44px] h-[44px] rounded-[10px] bg-[#f5ecf7] text-[#9c27b0] flex items-center justify-center flex-shrink-0">
+              <PlayCircle className="w-[22px] h-[22px] stroke-[2]" />
+            </div>
+          </a>
         </div>
 
         {/* Anti Ragging */}
-        <div className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif]">
-          <div className="flex flex-col justify-center">
-            <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">Anti Ragging</h6>
-            <div className="mt-[6px]">
-              <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
-                READ NOW
-              </span>
+        <div id="div_top_5" className="w-1/2 sm:w-1/3 lg:w-1/5 px-2 col-sm-2 col-xs-6 padd-r-0 shortLinks__item">
+          <a href="#" className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
+            <div className="flex flex-col justify-center">
+              <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">Anti Ragging</h6>
+              <div className="mt-[6px]">
+                <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
+                  READ NOW
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="w-[44px] h-[44px] rounded-[10px] bg-[#eff0fa] text-[#5c4cfc] flex items-center justify-center flex-shrink-0">
-            <XCircle className="w-[22px] h-[22px] stroke-[2]" />
-          </div>
+            <div className="w-[44px] h-[44px] rounded-[10px] bg-[#eff0fa] text-[#5c4cfc] flex items-center justify-center flex-shrink-0">
+              <XCircle className="w-[22px] h-[22px] stroke-[2]" />
+            </div>
+          </a>
         </div>
 
         {/* CU LMS */}
-        <div className="bg-[#124f85] rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.15)] flex items-center justify-between hover:brightness-105 transition-all min-h-[110px] font-['Segoe_UI',sans-serif]">
-          <div className="flex flex-col justify-center">
-            <h6 className="text-[15.5px] font-bold text-white leading-tight tracking-tight">CU LMS</h6>
-            <div className="mt-[6px]">
-              <span className="inline-block border-b-[2px] border-white/50 text-[11px] font-semibold uppercase text-white pb-0.5 tracking-wide">
-                CLICK HERE
-              </span>
+        <div id="div_top_5" className="w-1/2 sm:w-1/3 lg:w-1/5 px-2 col-sm-2 col-xs-6 padd-r-0 shortLinks__item">
+          <a href="#" className="bg-[#124f85] rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.15)] flex items-center justify-between hover:brightness-105 transition-all min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
+            <div className="flex flex-col justify-center">
+              <h6 className="text-[15.5px] font-bold text-white leading-tight tracking-tight">CU LMS</h6>
+              <div className="mt-[6px]">
+                <span className="inline-block border-b-[2px] border-white/50 text-[11px] font-semibold uppercase text-white pb-0.5 tracking-wide">
+                  CLICK HERE
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center justify-center flex-shrink-0 mr-1 opacity-90">
-            <GraduationCap className="w-[32px] h-[32px] text-white stroke-[1.5]" />
-          </div>
+            <div className="flex items-center justify-center flex-shrink-0 mr-1 opacity-90">
+              <GraduationCap className="w-[32px] h-[32px] text-white stroke-[1.5]" />
+            </div>
+          </a>
         </div>
 
         {/* My University Email */}
-        <div className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif]">
-          <div className="flex flex-col justify-center">
-            <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">My University Email</h6>
-            <div className="mt-[6px]">
-              <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
-                VIEW DETAILS
-              </span>
+        <div id="div_QF" className="w-1/2 sm:w-1/3 lg:w-1/5 px-2 col-sm-2 col-xs-6 padd-l-0 shortLinks__item">
+          <a href="#" className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
+            <div className="flex flex-col justify-center">
+              <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">My University Email</h6>
+              <div className="mt-[6px]">
+                <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
+                  VIEW DETAILS
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="w-[44px] h-[44px] rounded-[10px] bg-[#eef6ff] text-[#0066ff] flex items-center justify-center flex-shrink-0">
-            <Mail className="w-[22px] h-[22px] stroke-[2]" />
-          </div>
+            <div className="w-[44px] h-[44px] rounded-[10px] bg-[#eef6ff] text-[#0066ff] flex items-center justify-center flex-shrink-0">
+              <Mail className="w-[22px] h-[22px] stroke-[2]" />
+            </div>
+          </a>
         </div>
       </div>
 
