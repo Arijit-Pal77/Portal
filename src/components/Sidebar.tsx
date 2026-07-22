@@ -28,37 +28,37 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* Academics */}
         <button 
           onClick={() => onSelectTab('academics')}
-          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'academics' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'academics' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-academics"
         >
           <span>Academics</span>
-          <ChevronRight className="w-4 h-4 text-[#0a1b3f]" />
+          <ChevronRight className="w-4 h-4 text-[#001a4d]" />
         </button>
 
         {/* Accounts */}
         <button 
           onClick={() => onSelectTab('accounts')}
-          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'accounts' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'accounts' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-accounts"
         >
           <span>Accounts</span>
-          <ChevronRight className="w-4 h-4 text-[#0a1b3f]" />
+          <ChevronRight className="w-4 h-4 text-[#001a4d]" />
         </button>
 
         {/* Administration */}
         <button 
           onClick={() => onSelectTab('administration')}
-          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'administration' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'administration' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-administration"
         >
           <span>Administration</span>
-          <ChevronRight className="w-4 h-4 text-[#0a1b3f]" />
+          <ChevronRight className="w-4 h-4 text-[#001a4d]" />
         </button>
 
         {/* Apply for Loan Documents */}
         <button 
           onClick={() => onSelectTab('apply-loan')}
-          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'apply-loan' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'apply-loan' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-apply-loan"
         >
           Apply for Loan Documents
@@ -67,7 +67,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* Apply for NOC */}
         <button 
           onClick={() => onSelectTab('apply-noc')}
-          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'apply-noc' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'apply-noc' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-apply-noc"
         >
           Apply for NOC
@@ -76,17 +76,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* CSW */}
         <button 
           onClick={() => onSelectTab('csw')}
-          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'csw' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'csw' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-csw"
         >
           <span>Centre For Student Wellbeing (CSW)</span>
-          <ChevronRight className="w-4 h-4 text-[#0a1b3f] flex-shrink-0 ml-1" />
+          <ChevronRight className="w-4 h-4 text-[#001a4d] flex-shrink-0 ml-1" />
         </button>
 
         {/* Counseling Therapy Clinic Registration */}
         <button 
           onClick={() => onSelectTab('counseling')}
-          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'counseling' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'counseling' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-counseling"
         >
           Counseling Therapy Clinic Registration
@@ -95,17 +95,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* DCPD */}
         <button 
           onClick={() => onSelectTab('dcpd')}
-          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'dcpd' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'dcpd' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-dcpd"
         >
           <span>DCPD</span>
-          <ChevronRight className="w-4 h-4 text-[#0a1b3f]" />
+          <ChevronRight className="w-4 h-4 text-[#001a4d]" />
         </button>
 
         {/* DLL MOOC Coordinator List */}
         <button 
           onClick={() => onSelectTab('mooc')}
-          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'mooc' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'mooc' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-mooc"
         >
           DLL MOOC Coordinator List
@@ -114,21 +114,21 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* E Library */}
         <button 
           onClick={() => onSelectTab('elibrary')}
-          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'elibrary' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'elibrary' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-elibrary"
         >
           <span>E Library</span>
-          <ChevronRight className="w-4 h-4 text-[#0a1b3f]" />
+          <ChevronRight className="w-4 h-4 text-[#001a4d]" />
         </button>
 
         {/* Examination */}
         <button 
           onClick={() => onSelectTab('examination')}
-          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'examination' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'examination' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-examination"
         >
           <span>Examination</span>
-          <ChevronRight className="w-4 h-4 text-[#0a1b3f]" />
+          <ChevronRight className="w-4 h-4 text-[#001a4d]" />
         </button>
 
         {/* Hostel Dropdown Header */}
@@ -138,15 +138,15 @@ export const Sidebar: React.FC<SidebarProps> = ({
             className={`w-full flex items-center justify-between px-4 py-2 transition-colors text-left ${
               isHostelActive 
                 ? 'bg-[#103260] text-white font-semibold' 
-                : 'hover:bg-slate-100 text-[#0a1b3f]'
+                : 'hover:bg-slate-100 text-[#001a4d]'
             }`}
             id="nav-hostel-dropdown"
           >
             <span className="font-medium">Hostel</span>
             {isHostelExpanded ? (
-              <ChevronDown className={`w-4 h-4 ${isHostelActive ? 'text-white' : 'text-[#0a1b3f]'}`} />
+              <ChevronDown className={`w-4 h-4 ${isHostelActive ? 'text-white' : 'text-[#001a4d]'}`} />
             ) : (
-              <ChevronRight className={`w-4 h-4 ${isHostelActive ? 'text-white' : 'text-[#0a1b3f]'}`} />
+              <ChevronRight className={`w-4 h-4 ${isHostelActive ? 'text-white' : 'text-[#001a4d]'}`} />
             )}
           </button>
 
@@ -157,12 +157,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 onClick={() => onSelectTab('hostel-details')}
                 className={`w-full text-left pl-8 pr-4 py-1.5 text-[14px] flex items-center transition-colors font-['Arial',sans-serif] ${
                   activeTab === 'hostel-details' 
-                    ? 'font-bold text-[#0a1b3f] bg-blue-50/80 border-l-4 border-[#103260]' 
-                    : 'text-[#0a1b3f] hover:bg-slate-100 font-normal'
+                    ? 'font-bold text-[#001a4d] bg-blue-50/80 border-l-4 border-[#103260]' 
+                    : 'text-[#001a4d] hover:bg-slate-100 font-normal'
                 }`}
                 id="subnav-hostel-details"
               >
-                <span className="font-bold mr-2 text-[#0a1b3f]">–</span>
+                <span className="font-bold mr-2 text-[#001a4d]">–</span>
                 <span>Details</span>
               </button>
 
@@ -170,12 +170,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 onClick={() => onSelectTab('hostel-refund')}
                 className={`w-full text-left pl-8 pr-4 py-1.5 text-[14px] flex items-center transition-colors font-['Arial',sans-serif] ${
                   activeTab === 'hostel-refund' 
-                    ? 'font-bold text-[#0a1b3f] bg-blue-50/80 border-l-4 border-[#103260]' 
-                    : 'text-[#0a1b3f] hover:bg-slate-100 font-normal'
+                    ? 'font-bold text-[#001a4d] bg-blue-50/80 border-l-4 border-[#103260]' 
+                    : 'text-[#001a4d] hover:bg-slate-100 font-normal'
                 }`}
                 id="subnav-hostel-refund"
               >
-                <span className="font-bold mr-2 text-[#0a1b3f]">–</span>
+                <span className="font-bold mr-2 text-[#001a4d]">–</span>
                 <span>Hostel Refund Policy</span>
               </button>
             </div>
@@ -185,7 +185,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* International Study Opportunities */}
         <button 
           onClick={() => onSelectTab('international')}
-          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'international' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'international' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-international"
         >
           International Study Opportunities
@@ -194,17 +194,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* Library */}
         <button 
           onClick={() => onSelectTab('library')}
-          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'library' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'library' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-library"
         >
           <span>Library</span>
-          <ChevronRight className="w-4 h-4 text-[#0a1b3f]" />
+          <ChevronRight className="w-4 h-4 text-[#001a4d]" />
         </button>
 
         {/* My Profile */}
         <button 
           onClick={() => onSelectTab('profile')}
-          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'profile' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'profile' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-profile"
         >
           My Profile
@@ -213,7 +213,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* My Research Profile */}
         <button 
           onClick={() => onSelectTab('research-profile')}
-          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'research-profile' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'research-profile' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-research-profile"
         >
           My Research Profile
@@ -222,7 +222,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* Online Test */}
         <button 
           onClick={() => onSelectTab('online-test')}
-          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'online-test' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'online-test' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-online-test"
         >
           Online Test
@@ -231,7 +231,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* Ph.D Research & Supervision */}
         <button 
           onClick={() => onSelectTab('phd')}
-          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'phd' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'phd' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-phd"
         >
           Ph.D Research & Supervision
@@ -240,17 +240,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* Student Leave Application */}
         <button 
           onClick={() => onSelectTab('leave-application')}
-          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'leave-application' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'leave-application' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-leave-application"
         >
           <span>Student Leave Application</span>
-          <ChevronRight className="w-4 h-4 text-[#0a1b3f]" />
+          <ChevronRight className="w-4 h-4 text-[#001a4d]" />
         </button>
 
         {/* Student Placement */}
         <button 
           onClick={() => onSelectTab('student-placement')}
-          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'student-placement' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'student-placement' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-student-placement"
         >
           Student Placement
@@ -259,17 +259,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* Student Relation Management System */}
         <button 
           onClick={() => onSelectTab('srms')}
-          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'srms' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'srms' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-srms"
         >
           <span>Student Relation Management System</span>
-          <ChevronRight className="w-4 h-4 text-[#0a1b3f] flex-shrink-0 ml-1" />
+          <ChevronRight className="w-4 h-4 text-[#001a4d] flex-shrink-0 ml-1" />
         </button>
 
         {/* TPP UILAH */}
         <button 
           onClick={() => onSelectTab('tpp-uilah')}
-          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'tpp-uilah' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full text-left px-4 py-2 hover:bg-slate-100 transition-colors ${activeTab === 'tpp-uilah' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-tpp-uilah"
         >
           TPP UILAH
@@ -278,21 +278,21 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* Transport */}
         <button 
           onClick={() => onSelectTab('transport')}
-          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'transport' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'transport' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-transport"
         >
           <span>Transport</span>
-          <ChevronRight className="w-4 h-4 text-[#0a1b3f]" />
+          <ChevronRight className="w-4 h-4 text-[#001a4d]" />
         </button>
 
         {/* UCMC */}
         <button 
           onClick={() => onSelectTab('ucmc')}
-          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'ucmc' ? 'text-[#0a1b3f] font-bold bg-blue-50/80' : 'text-[#0a1b3f]'}`}
+          className={`w-full flex items-center justify-between px-4 py-2 hover:bg-slate-100 transition-colors text-left ${activeTab === 'ucmc' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
           id="nav-ucmc"
         >
           <span>UCMC</span>
-          <ChevronRight className="w-4 h-4 text-[#0a1b3f]" />
+          <ChevronRight className="w-4 h-4 text-[#001a4d]" />
         </button>
 
       </nav>
