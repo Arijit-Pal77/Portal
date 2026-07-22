@@ -54,9 +54,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
       {/* Top 5 Quick Action Cards Row - Matching exact CUIMS CSS specifications from HomeNewStyle.css */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         {/* Important Links */}
-        <div className="bg-white rounded-[14px] px-[20px] py-[18px] shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition-shadow h-[96px] font-['Segoe_UI',sans-serif]">
+        <div className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif]">
           <div className="flex flex-col justify-center">
-            <h6 className="text-[15.5px] font-bold text-[#1f355c] leading-tight tracking-tight">Important Links</h6>
+            <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">Important Links</h6>
             <div className="mt-[6px]">
               <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
                 CLICK HERE
@@ -69,9 +69,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
         </div>
 
         {/* Student Facilitation */}
-        <div className="bg-white rounded-[14px] px-[20px] py-[18px] shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition-shadow h-[96px] font-['Segoe_UI',sans-serif]">
+        <div className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif]">
           <div className="flex flex-col justify-center">
-            <h6 className="text-[15.5px] font-bold text-[#1f355c] leading-tight tracking-tight">Student Facilitation</h6>
+            <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">Student Facilitation</h6>
             <div className="mt-[6px]">
               <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
                 CLICK TO VIEW
@@ -84,9 +84,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
         </div>
 
         {/* Anti Ragging */}
-        <div className="bg-white rounded-[14px] px-[20px] py-[18px] shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition-shadow h-[96px] font-['Segoe_UI',sans-serif]">
+        <div className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif]">
           <div className="flex flex-col justify-center">
-            <h6 className="text-[15.5px] font-bold text-[#1f355c] leading-tight tracking-tight">Anti Ragging</h6>
+            <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">Anti Ragging</h6>
             <div className="mt-[6px]">
               <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
                 READ NOW
@@ -99,7 +99,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
         </div>
 
         {/* CU LMS */}
-        <div className="bg-[#204a74] rounded-[14px] px-[20px] py-[18px] shadow-sm border-2 border-[#00d05a] flex items-center justify-between hover:brightness-105 transition-all h-[96px] font-['Segoe_UI',sans-serif]">
+        <div className="bg-[#124f85] rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.15)] flex items-center justify-between hover:brightness-105 transition-all min-h-[110px] font-['Segoe_UI',sans-serif]">
           <div className="flex flex-col justify-center">
             <h6 className="text-[15.5px] font-bold text-white leading-tight tracking-tight">CU LMS</h6>
             <div className="mt-[6px]">
@@ -114,9 +114,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
         </div>
 
         {/* My University Email */}
-        <div className="bg-white rounded-[14px] px-[20px] py-[18px] shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition-shadow h-[96px] font-['Segoe_UI',sans-serif]">
+        <div className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif]">
           <div className="flex flex-col justify-center">
-            <h6 className="text-[15.5px] font-bold text-[#1f355c] leading-tight tracking-tight">My University Email</h6>
+            <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">My University Email</h6>
             <div className="mt-[6px]">
               <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
                 VIEW DETAILS
@@ -132,7 +132,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
       {/* Row 2: Weather Bar + Virtual ID Card Bar */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
         {/* Weather Bar (6 cols - extends to the middle of the page) */}
-        <div className="lg:col-span-6 bg-[#254e77] text-white rounded-[18px] px-6 sm:px-8 py-3.5 flex items-center justify-around shadow-xs select-none font-['Segoe_UI',_Tahoma,_Geneva,_Verdana,_sans-serif]">
+        <div className="lg:col-span-6 bg-[#254e77] text-white rounded-[8px] px-6 sm:px-8 py-3.5 flex items-center justify-around shadow-xs select-none font-['Segoe_UI',_Tahoma,_Geneva,_Verdana,_sans-serif]">
           {/* Left Text Block */}
           <div className="text-center">
             <div className="text-[13px] sm:text-[14px] font-bold uppercase tracking-tight text-white leading-tight">
@@ -170,7 +170,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
         </div>
 
         {/* Download Virtual ID Card (6 cols) - Exact CUIMS styling matching real division */}
-        <div className="lg:col-span-6 bg-white border border-slate-200/60 rounded-[18px] px-6 py-3.5 flex items-center justify-between shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] select-none">
+        <div className="lg:col-span-6 bg-white border border-[#e2e2e2] rounded-[8px] px-6 py-3.5 flex items-center justify-between shadow-sm select-none">
           <div className="flex items-center font-['Segoe_UI',sans-serif]">
             <h3 className="text-[16px] font-semibold text-[#2a385b] tracking-normal">
               Download Virtual ID Card
@@ -204,7 +204,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
         <div className="space-y-4">
           
           {/* 1. Important Message */}
-          <div className="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <div className="bg-white rounded-[4px] p-4 border border-[#e2e2e2] shadow-sm">
             <h3 className="text-sm font-bold text-[#103260] mb-3 font-['Open_Sans',sans-serif]">Important Message</h3>
             <div className="bg-[#f2f4f8] rounded-xl p-3 text-[11px] text-slate-700 leading-relaxed space-y-2 border border-slate-200/60">
               <p>
@@ -217,7 +217,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
           </div>
 
           {/* 2. Mentor Details */}
-          <div className="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <div className="bg-white rounded-[4px] p-4 border border-[#e2e2e2] shadow-sm">
             <div className="flex items-center space-x-2 text-[#103260] mb-3">
               <UserCheck className="w-4 h-4 text-[#103260]" />
               <h3 className="text-sm font-bold font-['Open_Sans',sans-serif]">Mentor Details</h3>
@@ -236,7 +236,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
           </div>
 
           {/* 3. My Question Or Queries */}
-          <div className="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <div className="bg-white rounded-[4px] p-4 border border-[#e2e2e2] shadow-sm">
             <div className="flex items-center space-x-2 text-[#103260] mb-3">
               <HelpCircle className="w-4 h-4 text-[#103260]" />
               <h3 className="text-sm font-bold font-['Open_Sans',sans-serif]">My Question Or Queries</h3>
@@ -267,7 +267,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
         <div className="space-y-4">
           
           {/* 1. My Course & Attendance */}
-          <div className="bg-white rounded-2xl p-5 border border-slate-100 shadow-xs">
+          <div className="bg-white rounded-[4px] p-5 border border-[#e2e2e2] shadow-sm">
             <h3 className="text-xl font-bold text-[#103260] mb-3 font-['Open_Sans',_sans-serif]">
               My Course & Attendance
             </h3>
@@ -304,13 +304,13 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
           </div>
 
           {/* 2. Upcoming Events */}
-          <div className="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <div className="bg-white rounded-[4px] p-4 border border-[#e2e2e2] shadow-sm">
             <h3 className="text-sm font-bold text-[#103260] font-['Open_Sans',sans-serif]">Upcoming Events</h3>
             <p className="text-xs text-gray-500 mt-2 italic">No major upcoming cultural or academic events scheduled today.</p>
           </div>
 
           {/* 3. Job Alert */}
-          <div className="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <div className="bg-white rounded-[4px] p-4 border border-[#e2e2e2] shadow-sm">
             <div className="flex items-center space-x-2 text-[#103260] mb-2">
               <Briefcase className="w-4 h-4 text-[#103260]" />
               <h3 className="text-sm font-bold font-['Open_Sans',sans-serif]">Job Alert</h3>
@@ -322,7 +322,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
 
         {/* COLUMN 3: Announcements ( ALL ) */}
         <div className="space-y-4">
-          <div className="bg-white rounded-2xl p-4 border border-slate-100 shadow-xs">
+          <div className="bg-white rounded-[4px] p-4 border border-[#e2e2e2] shadow-sm">
             <div className="flex items-center justify-between mb-3">
               <h3 className="text-sm font-bold text-[#303e67]">Announcements ( ALL )</h3>
             </div>
