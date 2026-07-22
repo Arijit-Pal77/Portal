@@ -157,41 +157,40 @@ export const ProfileView: React.FC = () => {
         </div>
 
         {/* SECTION 2: QUALIFICATION DETAILS */}
-        <div>
-          <div className="inline-block bg-[#324b72] text-white text-[10px] font-extrabold px-3 py-1 rounded-md uppercase tracking-wider mb-2 shadow-2xs">
+        <div className="font-['Arial',sans-serif]">
+          <div className="inline-block bg-[#4b559b] text-white text-[11.5px] font-bold px-3.5 py-[5px] rounded-[4px] uppercase tracking-wide mb-[3px]">
             QUALIFICATION DETAILS
           </div>
-
-          <div className="bg-white border border-slate-200 rounded-lg overflow-x-auto shadow-2xs">
-            <table className="w-full text-left text-xs border-collapse">
+          <div className="bg-white border border-slate-200/80 rounded-[4px] shadow-[0_0_15px_4px_rgba(0,0,0,0.02)] overflow-hidden">
+            <table className="w-full text-left text-[13.5px] border-collapse">
               <thead>
-                <tr className="bg-[#f2f4f8] text-slate-900 font-bold border-b border-slate-300">
-                  <th className="py-2.5 px-3 border-r border-slate-200">Qualification</th>
-                  <th className="py-2.5 px-3 border-r border-slate-200">Stream</th>
-                  <th className="py-2.5 px-3 border-r border-slate-200">Collage School Institute</th>
-                  <th className="py-2.5 px-3 border-r border-slate-200">University Board</th>
-                  <th className="py-2.5 px-3 border-r border-slate-200 text-center">Passign Year</th>
-                  <th className="py-2.5 px-3 border-r border-slate-200 text-center">Percent Marks</th>
+                <tr className="bg-[#f4f5f8] text-[#333] font-bold border-b border-slate-200/80">
+                  <th className="py-2.5 px-3 border-r border-slate-200/80">Qualification</th>
+                  <th className="py-2.5 px-3 border-r border-slate-200/80">Stream</th>
+                  <th className="py-2.5 px-3 border-r border-slate-200/80">Collage School Institute</th>
+                  <th className="py-2.5 px-3 border-r border-slate-200/80">University Board</th>
+                  <th className="py-2.5 px-3 border-r border-slate-200/80">Passign Year</th>
+                  <th className="py-2.5 px-3 border-r border-slate-200/80">Percent Marks</th>
                   <th className="py-2.5 px-3">Remarks</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-200 text-slate-800">
+              <tbody className="text-[#444] divide-y divide-slate-200/80">
                 <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="py-2.5 px-3 border-r border-slate-200 font-semibold">10th</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200">GENERAL</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200 font-medium">PATRASAYER BAMIRA GURUDAS INSTITUTION PATRASAYER</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200">WEST BENGAL BOARD OF SECONDARY EDUCATION</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200 text-center">2023</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200 text-center font-bold">89.14</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">10th</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">GENERAL</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">PATRASAYER BAMIRA GURUDAS INSTITUTION PATRASAYER</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">WEST BENGAL BOARD OF SECONDARY EDUCATION</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">2023</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">89.14</td>
                   <td className="py-2.5 px-3"></td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="py-2.5 px-3 border-r border-slate-200 font-semibold">10+2</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200">PCM</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200 font-medium">BANKURA HINDU HIGH SCHOOL BANKURA</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200">WEST BENGAL COUNCIL OF HIGHER SECONDARY EDUCATION</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200 text-center">2025</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200 text-center font-bold">90.6</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">10+2</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">PCM</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">BANKURA HINDU HIGH SCHOOL BANKURA</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">WEST BENGAL COUNCIL OF HIGHER SECONDARY EDUCATION</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">2025</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">90.6</td>
                   <td className="py-2.5 px-3"></td>
                 </tr>
               </tbody>
@@ -200,36 +199,35 @@ export const ProfileView: React.FC = () => {
         </div>
 
         {/* SECTION 3: CONTACT DETAILS */}
-        <div>
-          <div className="inline-block bg-[#324b72] text-white text-[10px] font-extrabold px-3 py-1 rounded-md uppercase tracking-wider mb-2 shadow-2xs">
+        <div className="font-['Arial',sans-serif]">
+          <div className="inline-block bg-[#4b559b] text-white text-[11.5px] font-bold px-3.5 py-[5px] rounded-[4px] uppercase tracking-wide mb-[3px]">
             CONTACT DETAILS
           </div>
-
-          <div className="bg-white border border-slate-200 rounded-lg overflow-x-auto shadow-2xs">
-            <table className="w-full text-left text-xs border-collapse">
+          <div className="bg-white border border-slate-200/80 rounded-[4px] shadow-[0_0_15px_4px_rgba(0,0,0,0.02)] overflow-hidden">
+            <table className="w-full text-left text-[13.5px] border-collapse">
               <thead>
-                <tr className="bg-[#f2f4f8] text-slate-900 font-bold border-b border-slate-300">
-                  <th className="py-2.5 px-3 border-r border-slate-200 w-36">Contact Type</th>
-                  <th className="py-2.5 px-3 border-r border-slate-200">Residence</th>
-                  <th className="py-2.5 px-3 border-r border-slate-200">Office</th>
-                  <th className="py-2.5 px-3 border-r border-slate-200">Mobile</th>
+                <tr className="bg-[#f4f5f8] text-[#333] font-bold border-b border-slate-200/80">
+                  <th className="py-2.5 px-3 border-r border-slate-200/80 w-40">Contact Type</th>
+                  <th className="py-2.5 px-3 border-r border-slate-200/80">Residence</th>
+                  <th className="py-2.5 px-3 border-r border-slate-200/80">Office</th>
+                  <th className="py-2.5 px-3 border-r border-slate-200/80">Mobile</th>
                   <th className="py-2.5 px-3">EmailId</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-200 text-slate-800">
+              <tbody className="text-[#444] divide-y divide-slate-200/80">
                 <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="py-2.5 px-3 border-r border-slate-200 font-semibold">Father</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200"></td>
-                  <td className="py-2.5 px-3 border-r border-slate-200"></td>
-                  <td className="py-2.5 px-3 border-r border-slate-200 font-medium">{studentData.fatherMobile}</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">Father</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80"></td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80"></td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">{studentData.fatherMobile}</td>
                   <td className="py-2.5 px-3"></td>
                 </tr>
                 <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="py-2.5 px-3 border-r border-slate-200 font-semibold">Student</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200"></td>
-                  <td className="py-2.5 px-3 border-r border-slate-200"></td>
-                  <td className="py-2.5 px-3 border-r border-slate-200 font-medium">{studentData.contact}</td>
-                  <td className="py-2.5 px-3 text-black font-medium">{studentData.email}</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">Student</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80"></td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80"></td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">{studentData.contact}</td>
+                  <td className="py-2.5 px-3">{studentData.email}</td>
                 </tr>
               </tbody>
             </table>
@@ -237,36 +235,32 @@ export const ProfileView: React.FC = () => {
         </div>
 
         {/* SECTION 4: SUSPENSION DETAILS */}
-        <div>
-          <div className="inline-block bg-[#324b72] text-white text-[10px] font-extrabold px-3 py-1 rounded-md uppercase tracking-wider mb-2 shadow-2xs">
+        <div className="font-['Arial',sans-serif]">
+          <div className="inline-block bg-[#4b559b] text-white text-[11.5px] font-bold px-3.5 py-[5px] rounded-[4px] uppercase tracking-wide mb-[3px]">
             SUSPENSION DETAILS
-          </div>
-          <div className="bg-white border border-slate-200 rounded-lg p-3 text-xs text-slate-500 shadow-2xs">
-            No disciplinary suspensions or records found.
           </div>
         </div>
 
         {/* SECTION 5: STUDENT MENTOR DETAILS */}
-        <div>
-          <div className="inline-block bg-[#324b72] text-white text-[10px] font-extrabold px-3 py-1 rounded-md uppercase tracking-wider mb-2 shadow-2xs">
+        <div className="font-['Arial',sans-serif]">
+          <div className="inline-block bg-[#4b559b] text-white text-[11.5px] font-bold px-3.5 py-[5px] rounded-[4px] uppercase tracking-wide mb-[3px]">
             STUDENT MENTOR DETAILS
           </div>
-
-          <div className="bg-white border border-slate-200 rounded-lg overflow-x-auto shadow-2xs">
-            <table className="w-full text-left text-xs border-collapse">
+          <div className="bg-white border border-slate-200/80 rounded-[4px] shadow-[0_0_15px_4px_rgba(0,0,0,0.02)] overflow-hidden">
+            <table className="w-full text-left text-[13.5px] border-collapse">
               <thead>
-                <tr className="bg-[#f2f4f8] text-slate-900 font-bold border-b border-slate-300">
-                  <th className="py-2.5 px-3 border-r border-slate-200">Mentor Name</th>
-                  <th className="py-2.5 px-3 border-r border-slate-200">MentorId</th>
-                  <th className="py-2.5 px-3 border-r border-slate-200">Mentor Department</th>
+                <tr className="bg-[#f4f5f8] text-[#333] font-bold border-b border-slate-200/80">
+                  <th className="py-2.5 px-3 border-r border-slate-200/80">Mentor Name</th>
+                  <th className="py-2.5 px-3 border-r border-slate-200/80">MentorId</th>
+                  <th className="py-2.5 px-3 border-r border-slate-200/80">Mentor Department</th>
                   <th className="py-2.5 px-3">Mentor Designation</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-200 text-slate-800">
+              <tbody className="text-[#444] divide-y divide-slate-200/80">
                 <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="py-2.5 px-3 border-r border-slate-200 font-semibold">NA</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200 font-bold text-slate-900">E20382</td>
-                  <td className="py-2.5 px-3 border-r border-slate-200">NA</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">NA</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">E20382</td>
+                  <td className="py-2.5 px-3 border-r border-slate-200/80">NA</td>
                   <td className="py-2.5 px-3">NA</td>
                 </tr>
               </tbody>
@@ -275,12 +269,9 @@ export const ProfileView: React.FC = () => {
         </div>
 
         {/* SECTION 6: FACILITIES AVAILED */}
-        <div>
-          <div className="inline-block bg-[#324b72] text-white text-[10px] font-extrabold px-3 py-1 rounded-md uppercase tracking-wider mb-2 shadow-2xs">
+        <div className="font-['Arial',sans-serif]">
+          <div className="inline-block bg-[#4b559b] text-white text-[11.5px] font-bold px-3.5 py-[5px] rounded-[4px] uppercase tracking-wide mb-[3px]">
             FACILITIES AVAILED
-          </div>
-          <div className="bg-white border border-slate-200 rounded-lg p-3 text-xs text-slate-800 font-medium shadow-2xs">
-            <span className="font-bold text-slate-900">Hostel Resident:</span> {hostelData.status} ({hostelData.hostelName}, Room {hostelData.roomNo})
           </div>
         </div>
 
