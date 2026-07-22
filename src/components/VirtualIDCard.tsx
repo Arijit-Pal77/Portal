@@ -73,9 +73,11 @@ export const VirtualIDCard: React.FC<VirtualIDCardProps> = ({ onBack }) => {
           <div className="px-5 py-3 border-b-2 border-slate-200 flex items-center justify-between bg-white">
             {/* CU Logo & Title */}
             <div className="flex items-center space-x-2.5">
-              <div className="w-11 h-11 bg-[#d9232a] text-white font-black text-2xl rounded-sm flex items-center justify-center border border-red-700 flex-shrink-0">
-                CU
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="CUIMS Logo" 
+                className="h-11 w-auto object-contain flex-shrink-0"
+              />
               <div>
                 <h1 className="text-[#d9232a] font-extrabold text-2xl tracking-tight leading-none uppercase">
                   CHANDIGARH UNIVERSITY

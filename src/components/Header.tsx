@@ -53,88 +53,11 @@ export const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onOpenProfile, 
                 className="h-11 sm:h-12 w-auto max-w-[220px] object-contain" 
               />
             ) : (
-              <svg className="h-11 sm:h-12 w-auto" viewBox="0 0 245 98" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  {/* Drop shadow filter for authentic logo shadow */}
-                  <filter id="cuimsShadow" x="-10%" y="-10%" width="130%" height="130%">
-                    <feDropShadow dx="2" dy="2.5" stdDeviation="2" floodColor="#000000" floodOpacity="0.38" />
-                  </filter>
-                </defs>
-                
-                {/* Logo Group with Shadow */}
-                <g filter="url(#cuimsShadow)">
-                  {/* Red Circle with right-side opening for 'U' */}
-                  <circle cx="48" cy="48" r="44" fill="#E30613" />
-                  
-                  {/* White interlocked CU Emblem */}
-                  <path 
-                    d="M 74 18 
-                       C 58 12 36 17 23 29 
-                       C 10 41 11 60 21 70 
-                       C 32 80 54 83 72 77 
-                       L 72 61 
-                       C 58 66 42 64 34 57 
-                       C 26 50 26 39 34 32 
-                       C 42 25 58 24 70 29 
-                       Z" 
-                    fill="white" 
-                  />
-                  
-                  <path 
-                    d="M 44 28 
-                       L 56 28 
-                       L 56 55 
-                       C 56 61 60 64 66 64 
-                       C 72 64 76 61 76 55 
-                       L 76 28 
-                       L 92 28 
-                       L 92 56 
-                       C 92 70 80 78 66 78 
-                       C 52 78 44 70 44 56 
-                       Z" 
-                    fill="white" 
-                  />
-
-                  {/* IMS Text */}
-                  <text 
-                    x="102" 
-                    y="62" 
-                    fontFamily="'Impact', 'Arial Black', 'Helvetica Neue', sans-serif" 
-                    fontWeight="900" 
-                    fontSize="56" 
-                    fill="#000000" 
-                    letterSpacing="-2"
-                  >
-                    IMS
-                  </text>
-
-                  {/* Subtitle 1: CHANDIGARH UNIVERSITY */}
-                  <text 
-                    x="103" 
-                    y="76" 
-                    fontFamily="'Arial', 'Helvetica Neue', sans-serif" 
-                    fontWeight="900" 
-                    fontSize="10" 
-                    fill="#000000" 
-                    letterSpacing="0.2"
-                  >
-                    CHANDIGARH UNIVERSITY
-                  </text>
-
-                  {/* Subtitle 2: INFORMATION MANAGEMENT SYSTEM */}
-                  <text 
-                    x="103" 
-                    y="86" 
-                    fontFamily="'Arial', 'Helvetica Neue', sans-serif" 
-                    fontWeight="800" 
-                    fontSize="7.8" 
-                    fill="#000000" 
-                    letterSpacing="0.1"
-                  >
-                    INFORMATION MANAGEMENT SYSTEM
-                  </text>
-                </g>
-              </svg>
+              <img 
+                src="/logo.png" 
+                alt="CUIMS Logo" 
+                className="h-11 sm:h-12 w-auto max-w-[220px] object-contain drop-shadow-sm" 
+              />
             )}
           </div>
         </div>
