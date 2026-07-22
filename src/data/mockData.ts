@@ -23,7 +23,7 @@ export const studentData: StudentInfo = {
   email: 'arijitpal2350@gmail.com',
   validTill: 'JUN-2029',
   category: 'HOSTELLER',
-  photoUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400',
+  photoUrl: '/profile.png',
   signatureUrl: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Jon_Kirsch_Signature.png',
 };
 
