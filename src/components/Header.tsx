@@ -11,15 +11,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onOpenProfile, onGoHome }) => {
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
-  const [customLogo, setCustomLogo] = useState<string | null>(null);
   const { photo } = useStudentPhoto();
-
-  useEffect(() => {
-    const savedLogo = localStorage.getItem('cuims_custom_logo');
-    if (savedLogo) {
-      setCustomLogo(savedLogo);
-    }
-  }, []);
 
   const handleProfileClick = () => {
     setIsProfileMenuOpen(false);
@@ -46,19 +38,11 @@ export const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onOpenProfile, 
           title="Chandigarh University Information Management System"
           id="cuims-brand-logo"
         >
-            {customLogo ? (
-              <img 
-                src={customLogo} 
-                alt="CUIMS Logo" 
-                className="h-11 sm:h-12 w-auto max-w-[220px] object-contain" 
-              />
-            ) : (
               <img 
                 src="/logo.png" 
                 alt="CUIMS Logo" 
                 className="h-11 sm:h-12 w-auto max-w-[220px] object-contain drop-shadow-sm" 
               />
-            )}
           </div>
         </div>
 
