@@ -52,79 +52,79 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
     <div className="space-y-4 pb-8 text-slate-800">
 
       {/* Top 5 Quick Action Cards Row - Matching exact CUIMS CSS specifications from HomeNewStyle.css */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         {/* Important Links */}
-        <div className="bg-white rounded-[12px] p-[24px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border border-slate-200/60 flex items-center justify-between hover:shadow-md transition-shadow min-h-[130px] font-['Segoe_UI',sans-serif]">
-          <div className="flex flex-col justify-between h-full">
-            <h6 className="text-[17px] font-bold text-[#354781] leading-tight m-0 p-0">Important Links</h6>
-            <div>
-              <small className="mt-[20px] inline-block border-b-[2.5px] border-[#DDD] text-[12px] font-semibold uppercase text-[#333333]">
+        <div className="bg-white rounded-[14px] px-[20px] py-[18px] shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition-shadow h-[96px] font-['Segoe_UI',sans-serif]">
+          <div className="flex flex-col justify-center">
+            <h6 className="text-[15.5px] font-bold text-[#1f355c] leading-tight tracking-tight">Important Links</h6>
+            <div className="mt-[6px]">
+              <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
                 CLICK HERE
-              </small>
+              </span>
             </div>
           </div>
-          <div className="w-[52px] h-[52px] rounded-[8px] bg-[#E5F3FE] text-[#1976d2] flex items-center justify-center flex-shrink-0 ml-2">
-            <ExternalLink className="w-[26px] h-[26px]" />
+          <div className="w-[44px] h-[44px] rounded-[10px] bg-[#eef6ff] text-[#0066ff] flex items-center justify-center flex-shrink-0">
+            <ExternalLink className="w-[22px] h-[22px] stroke-[2]" />
           </div>
         </div>
 
         {/* Student Facilitation */}
-        <div className="bg-white rounded-[12px] p-[24px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border border-slate-200/60 flex items-center justify-between hover:shadow-md transition-shadow min-h-[130px] font-['Segoe_UI',sans-serif]">
-          <div className="flex flex-col justify-between h-full">
-            <h6 className="text-[17px] font-bold text-[#354781] leading-tight m-0 p-0">Student Facilitation</h6>
-            <div>
-              <small className="mt-[20px] inline-block border-b-[2.5px] border-[#DDD] text-[12px] font-semibold uppercase text-[#333333]">
+        <div className="bg-white rounded-[14px] px-[20px] py-[18px] shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition-shadow h-[96px] font-['Segoe_UI',sans-serif]">
+          <div className="flex flex-col justify-center">
+            <h6 className="text-[15.5px] font-bold text-[#1f355c] leading-tight tracking-tight">Student Facilitation</h6>
+            <div className="mt-[6px]">
+              <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
                 CLICK TO VIEW
-              </small>
+              </span>
             </div>
           </div>
-          <div className="w-[52px] h-[52px] rounded-[8px] bg-[#f2e8f8] text-[#9c27b0] flex items-center justify-center flex-shrink-0 ml-2">
-            <PlayCircle className="w-[26px] h-[26px]" />
+          <div className="w-[44px] h-[44px] rounded-[10px] bg-[#f5ecf7] text-[#9c27b0] flex items-center justify-center flex-shrink-0">
+            <PlayCircle className="w-[22px] h-[22px] stroke-[2]" />
           </div>
         </div>
 
         {/* Anti Ragging */}
-        <div className="bg-white rounded-[12px] p-[24px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border border-slate-200/60 flex items-center justify-between hover:shadow-md transition-shadow min-h-[130px] font-['Segoe_UI',sans-serif]">
-          <div className="flex flex-col justify-between h-full">
-            <h6 className="text-[17px] font-bold text-[#354781] leading-tight m-0 p-0">Anti Ragging</h6>
-            <div>
-              <small className="mt-[20px] inline-block border-b-[2.5px] border-[#DDD] text-[12px] font-semibold uppercase text-[#333333]">
+        <div className="bg-white rounded-[14px] px-[20px] py-[18px] shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition-shadow h-[96px] font-['Segoe_UI',sans-serif]">
+          <div className="flex flex-col justify-center">
+            <h6 className="text-[15.5px] font-bold text-[#1f355c] leading-tight tracking-tight">Anti Ragging</h6>
+            <div className="mt-[6px]">
+              <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
                 READ NOW
-              </small>
+              </span>
             </div>
           </div>
-          <div className="w-[52px] h-[52px] rounded-[8px] bg-[#ede7f6] text-[#673ab7] flex items-center justify-center flex-shrink-0 ml-2">
-            <XCircle className="w-[26px] h-[26px]" />
+          <div className="w-[44px] h-[44px] rounded-[10px] bg-[#eff0fa] text-[#5c4cfc] flex items-center justify-center flex-shrink-0">
+            <XCircle className="w-[22px] h-[22px] stroke-[2]" />
           </div>
         </div>
 
         {/* CU LMS */}
-        <div className="bg-[#1f456e] rounded-[12px] p-[24px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border-[2.5px] border-[#00b0ff] flex items-center justify-between hover:brightness-105 transition-all min-h-[130px] font-['Segoe_UI',sans-serif]">
-          <div className="flex flex-col justify-between h-full">
-            <h6 className="text-[17px] font-bold text-white leading-tight m-0 p-0">CU LMS</h6>
-            <div>
-              <small className="mt-[20px] inline-block border-b-[2.5px] border-white/50 text-[12px] font-semibold uppercase text-sky-100">
+        <div className="bg-[#204a74] rounded-[14px] px-[20px] py-[18px] shadow-sm border-2 border-[#00d05a] flex items-center justify-between hover:brightness-105 transition-all h-[96px] font-['Segoe_UI',sans-serif]">
+          <div className="flex flex-col justify-center">
+            <h6 className="text-[15.5px] font-bold text-white leading-tight tracking-tight">CU LMS</h6>
+            <div className="mt-[6px]">
+              <span className="inline-block border-b-[2px] border-white/50 text-[11px] font-semibold uppercase text-white pb-0.5 tracking-wide">
                 CLICK HERE
-              </small>
+              </span>
             </div>
           </div>
-          <div className="w-[52px] h-[52px] rounded-[8px] bg-white/15 text-white flex items-center justify-center flex-shrink-0 ml-2">
-            <GraduationCap className="w-[26px] h-[26px] stroke-[2]" />
+          <div className="flex items-center justify-center flex-shrink-0 mr-1 opacity-90">
+            <GraduationCap className="w-[32px] h-[32px] text-white stroke-[1.5]" />
           </div>
         </div>
 
         {/* My University Email */}
-        <div className="bg-white rounded-[12px] p-[24px] shadow-[0_0_15px_4px_rgba(100,98,92,0.06)] border border-slate-200/60 flex items-center justify-between hover:shadow-md transition-shadow min-h-[130px] font-['Segoe_UI',sans-serif]">
-          <div className="flex flex-col justify-between h-full">
-            <h6 className="text-[17px] font-bold text-[#354781] leading-tight m-0 p-0">My University Email</h6>
-            <div>
-              <small className="mt-[20px] inline-block border-b-[2.5px] border-[#DDD] text-[12px] font-semibold uppercase text-[#333333]">
+        <div className="bg-white rounded-[14px] px-[20px] py-[18px] shadow-sm border border-slate-200/80 flex items-center justify-between hover:shadow-md transition-shadow h-[96px] font-['Segoe_UI',sans-serif]">
+          <div className="flex flex-col justify-center">
+            <h6 className="text-[15.5px] font-bold text-[#1f355c] leading-tight tracking-tight">My University Email</h6>
+            <div className="mt-[6px]">
+              <span className="inline-block border-b-2 border-slate-300 text-[11px] font-semibold uppercase text-slate-500 pb-0.5 tracking-wide">
                 VIEW DETAILS
-              </small>
+              </span>
             </div>
           </div>
-          <div className="w-[52px] h-[52px] rounded-[8px] bg-[#E5F3FE] text-[#1976d2] flex items-center justify-center flex-shrink-0 ml-2">
-            <Mail className="w-[26px] h-[26px]" />
+          <div className="w-[44px] h-[44px] rounded-[10px] bg-[#eef6ff] text-[#0066ff] flex items-center justify-center flex-shrink-0">
+            <Mail className="w-[22px] h-[22px] stroke-[2]" />
           </div>
         </div>
       </div>
