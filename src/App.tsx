@@ -7,6 +7,7 @@ import { HostelDetails } from './components/HostelDetails';
 import { VirtualIDCard } from './components/VirtualIDCard';
 import { ProfileView } from './components/ProfileView';
 import { GenericView } from './components/GenericView';
+import { Bug, Phone, Mail } from 'lucide-react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<NavTab>('dashboard');
@@ -99,7 +100,7 @@ export default function App() {
       />
 
       {/* Main Workspace Layout */}
-      <div className="flex flex-1 overflow-hidden h-[calc(100vh-53px)]">
+      <div className="flex flex-1 overflow-hidden min-h-0">
         {/* Left Sidebar */}
         <Sidebar 
           activeTab={activeTab}
@@ -114,6 +115,22 @@ export default function App() {
           {renderMainContent()}
         </main>
       </div>
+
+      {/* Fixed Footer at the bottom */}
+      <footer className="shrink-0 h-[38px] flex bg-[#f3f5f9]">
+        {isSidebarOpen && (
+          <div className="w-[260px] bg-[#34465d] flex items-center justify-end pr-4 text-[#e74c3c] text-[13px] font-medium cursor-pointer rounded-tr-lg shrink-0">
+             Report a Bug <Bug size={14} className="ml-1.5" />
+          </div>
+        )}
+        <div className={`flex-1 bg-[#34465d] flex items-center px-4 text-white text-[13px] ${isSidebarOpen ? 'ml-1 rounded-tl-lg' : 'rounded-t-lg'}`}>
+           <span className="font-semibold">Chandigarh University, Gharuan, Mohali (Punjab)</span>
+           <span className="mx-2 text-gray-400">|</span>
+           <Phone className="w-3.5 h-3.5 mr-1 text-[#e83e8c]" fill="currentColor" /> <span className="font-semibold mr-1">Helpline:</span> 1800 257 1800
+           <span className="mx-2 text-gray-400">|</span>
+           <Mail className="w-3.5 h-3.5 mr-1 text-[#e0e0e0]" fill="currentColor" /> <span className="font-semibold mr-1">Email:</span> studentcare@cumail.in
+        </div>
+      </footer>
     </div>
   );
 }
