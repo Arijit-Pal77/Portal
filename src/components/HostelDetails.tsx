@@ -90,10 +90,7 @@ export const HostelDetails: React.FC = () => {
               alt="Chandigarh University Hostel Building"
               className="w-full h-72 sm:h-80 object-cover group-hover:scale-102 transition-transform duration-300"
             />
-            {/* Top Left 'Ps' Badge as seen in CUIMS UI */}
-            <div className="absolute top-2 left-2 bg-[#001e36] text-[#31a8ff] text-[11px] font-black px-2 py-0.5 rounded-sm shadow-md border border-sky-600/30">
-              Ps
-            </div>
+
 
           </div>
 
