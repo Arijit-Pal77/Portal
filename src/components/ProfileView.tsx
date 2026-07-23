@@ -110,7 +110,7 @@ export const ProfileView: React.FC = () => {
       <div className="space-y-6">
 
         {/* SECTION 1: STUDENT PERSONAL INFORMATION */}
-        <div className="font-['Arial',sans-serif]">
+        <div className="font-sans">
           {/* Section Pill Badge */}
           <div className="inline-block bg-[#4b559b] text-white text-[11.5px] font-bold px-3.5 py-[5px] rounded-[4px] uppercase tracking-wide mb-[3px]">
             STUDENT PERSONAL INFORMATION
@@ -157,7 +157,7 @@ export const ProfileView: React.FC = () => {
         </div>
 
         {/* SECTION 2: QUALIFICATION DETAILS */}
-        <div className="font-['Arial',sans-serif]">
+        <div className="font-sans">
           <div className="inline-block bg-[#4b559b] text-white text-[11.5px] font-bold px-3.5 py-[5px] rounded-[4px] uppercase tracking-wide mb-[3px]">
             QUALIFICATION DETAILS
           </div>
@@ -199,7 +199,7 @@ export const ProfileView: React.FC = () => {
         </div>
 
         {/* SECTION 3: CONTACT DETAILS */}
-        <div className="font-['Arial',sans-serif]">
+        <div className="font-sans">
           <div className="inline-block bg-[#4b559b] text-white text-[11.5px] font-bold px-3.5 py-[5px] rounded-[4px] uppercase tracking-wide mb-[3px]">
             CONTACT DETAILS
           </div>
@@ -235,14 +235,14 @@ export const ProfileView: React.FC = () => {
         </div>
 
         {/* SECTION 4: SUSPENSION DETAILS */}
-        <div className="font-['Arial',sans-serif]">
+        <div className="font-sans">
           <div className="inline-block bg-[#4b559b] text-white text-[11.5px] font-bold px-3.5 py-[5px] rounded-[4px] uppercase tracking-wide mb-[3px]">
             SUSPENSION DETAILS
           </div>
         </div>
 
         {/* SECTION 5: STUDENT MENTOR DETAILS */}
-        <div className="font-['Arial',sans-serif]">
+        <div className="font-sans">
           <div className="inline-block bg-[#4b559b] text-white text-[11.5px] font-bold px-3.5 py-[5px] rounded-[4px] uppercase tracking-wide mb-[3px]">
             STUDENT MENTOR DETAILS
           </div>
@@ -269,24 +269,12 @@ export const ProfileView: React.FC = () => {
         </div>
 
         {/* SECTION 6: FACILITIES AVAILED */}
-        <div className="font-['Arial',sans-serif]">
+        <div className="font-sans">
           <div className="inline-block bg-[#4b559b] text-white text-[11.5px] font-bold px-3.5 py-[5px] rounded-[4px] uppercase tracking-wide mb-[3px]">
             FACILITIES AVAILED
           </div>
         </div>
 
-      </div>
-
-      {/* Bottom Contact Footer Banner */}
-      <div className="bg-[#1f2937] text-white py-3 px-4 rounded-xl shadow-xs text-xs flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left mt-8">
-        <div className="font-semibold text-slate-200">
-          Chandigarh University, Gharuan, Mohali (Punjab)
-        </div>
-        <div className="flex flex-wrap items-center justify-center gap-4 text-[11px] text-slate-300">
-          <span>📞 <span className="font-bold text-white">Helpline:</span> 1800 257 1800</span>
-          <span>✉️ <span className="font-bold text-white">Email:</span> studentcare@cumail.in</span>
-          <span className="text-red-400 font-bold hover:underline cursor-pointer">Report a Bug 🚩</span>
-        </div>
       </div>
 
     </div>

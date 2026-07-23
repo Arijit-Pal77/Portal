@@ -162,18 +162,6 @@ export const HostelDetails: React.FC = () => {
         </div>
       </div>
 
-      {/* Bottom Contact Footer Banner */}
-      <div className="bg-[#1f2937] text-white py-3 px-4 rounded-xl shadow-xs text-xs flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
-        <div className="font-semibold text-slate-200">
-          Chandigarh University, Gharuan, Mohali (Punjab)
-        </div>
-        <div className="flex flex-wrap items-center justify-center gap-4 text-[11px] text-slate-300">
-          <span>📞 <span className="font-bold text-white">Helpline:</span> 1800 257 1800</span>
-          <span>✉️ <span className="font-bold text-white">Email:</span> studentcare@cumail.in</span>
-          <span className="text-red-400 font-bold hover:underline cursor-pointer">Report a Bug 🚩</span>
-        </div>
-      </div>
-
     </div>
   );
 };

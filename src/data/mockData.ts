@@ -63,35 +63,33 @@ export const mentorData: MentorInfo = {
 export const announcementsList: Announcement[] = [
   {
     id: 'ann-1',
-    title: 'TRAFFIC ADVISORY: ACADEMIC YEAR 2026-27',
-    date: '07 JUL 2026',
-    time: '16:27:40',
-    department: 'ADMINISTRATION DEPARTMENT',
-    content: 'Traffic and Parking instructions for Academic Year 2026-27 are elucidated in the attached pdf file. Cooperation from all faculty, staff & students will be highly appreciated. Regards',
-    attachmentName: 'Attachment_1_Pa...',
-    uploadedBy: 'Sanjeev Bakshi (ADMINISTRATION)',
-    isPinned: true,
-  },
-  {
-    id: 'ann-2',
-    title: 'NOTIFICATION: ROUTE CHART FOR CU BUSES W.E.F 07.07.2026 (EVENING)',
-    date: '06 JUL 2026',
-    time: '14:31:37',
-    department: 'DEPARTMENT OF ADMINISTRATION',
-    content: 'Detailed bus route schedules and stop timings effective from 07.07.2026 evening session have been uploaded. Students utilizing university transport must verify their bus numbers.',
-    attachmentName: 'Bus_Routes_2026.pdf',
+    title: 'TRAFFIC & PARKING ADVISORY FOR STUDENTS ONLY: ORIENTATION 2026',
+    date: '17 JUL 2026',
+    time: '14:59:28',
+    department: '',
+    content: `
+      <div class="font-bold mb-1">TRAFFIC & PARKING ADVISORY FOR STUDENTS ONLY: ORIENTATION PROGRAMME FOR THE ACADEMIC YEAR 2026-27</div>
+      <div class="mb-2">1. The Orientation Programme for The Academic Year 2026-27 is scheduled at the Chandigarh University Campus from 23-29 July 2026. Traffic and Parking Instructions for the Event are elucidated in succeeding paragraphs. <i>The provisions of this Traffic & Parking Advisory will be effective from 7 PM on 17 Jul 2026 to till further orders.</i></div>
+      <div class="mb-2">(Emergency Contact for Parking - 7087110581 & Transport - 7087039349)</div>
+      <div class="mb-1">2. Guidelines for South Campus Area For Students Only</div>
+      <div class="ml-4 mb-1">(a) Restricted Parking Areas</div>
+      <ul class="list-disc pl-8 mb-2">
+        <li>South Campus Student Parking Area</li>
+      </ul>
+      <div class="ml-4 mb-1">(b) Available Parking Areas</div>
+      <ul class="list-disc pl-8 mb-2">
+        <li>Adhesh Campus Student Parking</li>
+      </ul>
+      <div class="mb-1">3. Pedestrian Pathways for Students & Staff</div>
+      <ul class="list-disc pl-8 mb-2">
+        <li>A - Block Entry VIP Gate ---As per scheduled Timing</li>
+        <li>A - Block Entry Gate No. 2 ---Block A1 ---Block A2 ---BlockA-3</li>
+        <li>B & C - Block Entry Gate No. 2 ---Block-B1 ---Block B2 ---Block B3 ---Block B4 ---Block-B5 ---Block-C1 ---Block-C2 ---Block-C3</li>
+        <li>South Campus Entry Gate No.3 & Gate No.07 ---Block D1 ---Block-D2 ---Block-D3 ---Block-D4 ---Block-D5 ---Block-D6</li>
+      </ul>
+    `,
+    attachmentName: '',
     uploadedBy: 'Administration Transport Desk',
     isPinned: true,
-  },
-  {
-    id: 'ann-3',
-    title: 'MID-SEMESTER EXAMINATION SCHEDULE & seating plan',
-    date: '02 JUL 2026',
-    time: '11:15:00',
-    department: 'EXAMINATION CONTROLLER',
-    content: 'Mid-semester examinations seating plans and hall ticket downloads are now active on CUIMS under the Examination portal tab.',
-    attachmentName: 'MidSem_Rules.pdf',
-    uploadedBy: 'Controller of Examinations',
-    isPinned: false,
   }
 ];

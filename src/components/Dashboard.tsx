@@ -214,14 +214,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
         <div className="space-y-4">
           
           {/* 1. Important Message */}
-          <div className="bg-white rounded-[4px] p-4 border border-[#e2e2e2] shadow-sm">
-            <h3 className="text-sm font-bold text-[#103260] mb-3 font-['Open_Sans',sans-serif]">Important Message</h3>
-            <div className="bg-[#f2f4f8] rounded-xl p-3 text-[11px] text-slate-700 leading-relaxed space-y-2 border border-slate-200/60">
-              <p>
-                <span className="font-semibold text-slate-800">1.Pending Documents:</span> The status of Pending documents is as given below, you are required to submit the same in Block-B1 (Room No.208(General category) and Room No. 204(Scholarship stds.) (Abbreviation: MIG: Migration, CHAR/ CHR: Character, DIP: Diploma, ORG: Original)
+          <div className="bg-white rounded-[12px] p-6 sm:p-8 min-h-[340px] border border-[#e2e2e2] shadow-sm">
+            <h3 className="text-[17px] font-bold text-[#2a4365] mb-4 font-['Open_Sans',sans-serif]">Important Message</h3>
+            <div className="bg-[#f2f4f6] rounded-[10px] p-5 text-[13px] text-[#334155] leading-relaxed border border-slate-100">
+              <p className="mb-2">
+                1.Pending Documents: The status of Pending documents is as given below, you are required to submit the same in Block-B1 (Room No.208(General category) and Room No. 204(Scholarship stds.) (Abbreviation: MIG: Migration, CHAR/ CHR: Character, DIP: Diploma, ORG: Original)
               </p>
-              <p className="font-medium text-slate-800 pt-1 border-t border-slate-200/80">
-                <span className="font-bold text-slate-900">Document Remarks:</span><span className="text-slate-900 font-semibold"> No Documents Pending</span>
+              <p>
+                <span className="font-bold text-[#334155]">Document Remarks:</span>No Documents Pending
               </p>
             </div>
           </div>
@@ -244,33 +244,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
               </li>
             </ul>
           </div>
-
-          {/* 3. My Question Or Queries */}
-          <div className="bg-white rounded-[4px] p-4 border border-[#e2e2e2] shadow-sm">
-            <div className="flex items-center space-x-2 text-[#103260] mb-3">
-              <HelpCircle className="w-4 h-4 text-[#103260]" />
-              <h3 className="text-sm font-bold font-['Open_Sans',sans-serif]">My Question Or Queries</h3>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="text-xs text-center border-collapse w-full">
-                <thead>
-                  <tr className="bg-[#e8ecf2] font-bold text-slate-800 border border-slate-200">
-                    <th className="py-1.5 px-3 border-r border-slate-200">Total</th>
-                    <th className="py-1.5 px-3 border-r border-slate-200">Closed</th>
-                    <th className="py-1.5 px-3">Open</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-white border border-slate-200 font-semibold text-slate-800">
-                    <td className="py-1.5 px-3 border-r border-slate-200">2</td>
-                    <td className="py-1.5 px-3 border-r border-slate-200">2</td>
-                    <td className="py-1.5 px-3">0</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
+          {/* 3. My Question Or Queries (REMOVED based on screenshot) */}
         </div>
 
         {/* COLUMN 2: My Course & Attendance, Upcoming Events, Job Alert */}
@@ -300,10 +274,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
                       <td className="py-2.5 px-3 border border-slate-200 font-normal text-slate-800 leading-snug">
                         {course.subject}
                       </td>
-                      <td className="py-2.5 px-2 text-center border border-slate-200 text-slate-800 font-normal">
+                      <td className="py-2.5 px-2 text-center border border-slate-200">
                         {course.semester}
                       </td>
-                      <td className="py-2.5 px-2 text-center border border-slate-200 text-slate-800 font-normal">
+                      <td className="py-2.5 px-2 text-center border border-slate-200">
                         {course.attendancePercentage}
                       </td>
                     </tr>
@@ -314,82 +288,83 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
           </div>
 
           {/* 2. Upcoming Events */}
-          <div className="bg-white rounded-[4px] p-4 border border-[#e2e2e2] shadow-sm">
-            <h3 className="text-sm font-bold text-[#103260] font-['Open_Sans',sans-serif]">Upcoming Events</h3>
-            <p className="text-xs text-gray-500 mt-2 italic">No major upcoming cultural or academic events scheduled today.</p>
+          <div className="bg-white rounded-[4px] p-4 border border-[#e2e2e2] shadow-sm flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
+            <h3 className="text-[15px] font-bold text-[#103260]">Upcoming Events</h3>
+            <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
+              <Calendar className="w-4 h-4 text-slate-600" />
+            </div>
           </div>
 
           {/* 3. Job Alert */}
-          <div className="bg-white rounded-[4px] p-4 border border-[#e2e2e2] shadow-sm">
-            <div className="flex items-center space-x-2 text-[#103260] mb-2">
-              <Briefcase className="w-4 h-4 text-[#103260]" />
-              <h3 className="text-sm font-bold font-['Open_Sans',sans-serif]">Job Alert</h3>
+          <div className="bg-white rounded-[4px] p-4 border border-[#e2e2e2] shadow-sm flex items-center justify-between hover:shadow-md transition-shadow cursor-pointer">
+            <h3 className="text-[15px] font-bold text-[#103260]">Job Alert</h3>
+            <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
+              <Briefcase className="w-4 h-4 text-slate-600" />
             </div>
-            <p className="text-xs text-gray-500 italic">DCPD placement drives and internship notifications will appear here.</p>
           </div>
 
         </div>
 
-        {/* COLUMN 3: Announcements ( ALL ) */}
-        <div className="space-y-4">
-          <div className="bg-white rounded-[4px] p-4 border border-[#e2e2e2] shadow-sm">
-            <div className="flex items-center justify-between mb-3">
-              <h3 className="text-sm font-bold text-[#303e67]">Announcements ( ALL )</h3>
-            </div>
+        {/* COLUMN 3: Announcements */}
+        <div className="bg-white rounded-[4px] p-5 border border-[#e2e2e2] shadow-sm flex flex-col min-h-0">
+          <div className="flex items-center justify-between mb-4 flex-shrink-0">
+            <h3 className="text-[16px] font-bold text-[#103260] font-['Open_Sans',sans-serif] tracking-tight">Announcements ( ALL )</h3>
+          </div>
 
-            {/* Filter + Search */}
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="relative flex-1">
-                <input 
-                  type="text" 
-                  placeholder="Search Announcement" 
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full bg-[#f2f4f8] text-xs py-1.5 pl-3 pr-8 rounded-lg border border-slate-200 focus:outline-none focus:bg-white"
-                />
-                <Search className="w-3.5 h-3.5 text-gray-400 absolute right-2.5 top-2" />
-              </div>
-              <select 
-                value={announcementFilter}
-                onChange={(e) => setAnnouncementFilter(e.target.value)}
-                className="bg-[#f2f4f8] text-xs py-1.5 px-3 rounded-lg border border-slate-200 focus:outline-none font-semibold text-slate-700"
-              >
-                <option value="ALL">ALL</option>
-                <option value="ADMIN">ADMIN</option>
-                <option value="ACADEMIC">ACADEMIC</option>
-              </select>
+          {/* Search & Filter */}
+          <div className="flex space-x-2 mb-4 flex-shrink-0">
+            <div className="relative flex-1">
+              <input 
+                type="text" 
+                placeholder="Search Announcement" 
+                className="w-full pl-3 pr-8 py-1.5 bg-[#f0f0f0] border border-transparent rounded-[20px] text-[12.5px] outline-none focus:bg-white focus:border-slate-300 focus:ring-1 focus:ring-[#103260]/20 transition-all placeholder-slate-500 text-slate-700"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <Search className="w-3.5 h-3.5 absolute right-3 top-1/2 -translate-y-1/2 text-slate-500" />
             </div>
+            <select 
+              className="bg-[#f0f0f0] border-none text-[12px] font-semibold text-slate-700 rounded-[20px] px-4 py-1.5 outline-none cursor-pointer focus:ring-1 focus:ring-[#103260]/20"
+              value={announcementFilter}
+              onChange={(e) => setAnnouncementFilter(e.target.value)}
+            >
+              <option value="ALL">ALL</option>
+              <option value="PINNED">PINNED</option>
+            </select>
+          </div>
 
-            {/* Announcement List with Scrollbar */}
-            <div className="space-y-3 max-h-[480px] overflow-y-auto custom-scrollbar pr-1">
+          {/* Announcements List Container */}
+          <div className="flex-1 overflow-y-auto custom-scrollbar pr-1 -mr-1 max-h-[500px]">
+            <div className="space-y-3">
               {filteredAnnouncements.map((ann) => (
-                <div key={ann.id} className="bg-[#f4f6f9] rounded-xl p-3.5 border border-slate-200/80 text-slate-700 text-xs space-y-2">
-                  <div className="flex items-start space-x-1.5 text-slate-900 font-extrabold uppercase text-[11px] leading-tight">
-                    <span className="text-red-600 flex-shrink-0 mt-0.5">📌</span>
-                    <span>{ann.title}</span>
+                <div key={ann.id} className="bg-[#f2f4f8] border border-[#e0e4eb] rounded-[6px] p-3.5 hover:shadow-sm transition-shadow">
+                  {/* Title */}
+                  <div className="flex justify-between items-start mb-2 gap-2">
+                    <h4 className="text-[12.5px] font-bold text-[#d92323] leading-snug flex-1">
+                      {ann.isPinned && <Pin className="w-3 h-3 inline mr-1 text-[#d92323] fill-current" />}
+                      {ann.title}
+                    </h4>
                   </div>
 
-                  {/* Date & Time Badges */}
-                  <div className="flex items-center space-x-2 text-[10px]">
-                    <span className="bg-[#314a72] text-white px-2 py-0.5 rounded-md font-semibold flex items-center space-x-1">
-                      <Calendar className="w-3 h-3" />
-                      <span>{ann.date}</span>
+                  {/* Date & Time pills */}
+                  <div className="flex items-center space-x-1.5 mb-2.5 text-[10px] font-bold text-white">
+                    <span className="bg-[#596d91] rounded-[20px] px-2.5 py-0.5 flex items-center shadow-xs">
+                      📅 {ann.date}
                     </span>
-                    <span className="bg-[#314a72] text-white px-2 py-0.5 rounded-md font-semibold flex items-center space-x-1">
-                      <Clock className="w-3 h-3" />
-                      <span>{ann.time}</span>
+                    <span className="bg-[#596d91] rounded-[20px] px-2.5 py-0.5 flex items-center shadow-xs">
+                      🕐 {ann.time}
                     </span>
                   </div>
 
-                  {/* Body */}
-                  <div className="text-[11px] leading-relaxed text-slate-700 pt-1">
-                    <span className="font-bold text-slate-900 block mb-0.5">FROM {ann.department}</span>
-                    <p>{ann.content}</p>
-                  </div>
+                  {/* Body HTML */}
+                  <div 
+                    className="text-[11px] leading-relaxed text-slate-700 pt-1 html-content"
+                    dangerouslySetInnerHTML={{ __html: ann.content }} 
+                  />
 
                   {/* Attachment if present */}
                   {ann.attachmentName && (
-                    <div className="pt-1">
+                    <div className="pt-2">
                       <span className="inline-flex items-center space-x-1.5 bg-white border border-slate-300 rounded-md px-2.5 py-1 text-[10px] text-slate-700 font-medium hover:bg-slate-50 cursor-pointer shadow-2xs">
                         <span className="bg-red-600 text-white font-bold text-[8px] px-1 rounded-2xs">PDF</span>
                         <span className="truncate max-w-[160px]">{ann.attachmentName}</span>
@@ -397,29 +372,19 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
                     </div>
                   )}
 
-                  <div className="text-[10px] text-slate-500 font-medium pt-2 border-t border-slate-200/70">
-                    Uploaded by: <span className="font-bold text-slate-800">{ann.uploadedBy}</span>
+                  <div className="text-[10px] text-slate-500 font-medium pt-2.5 mt-2.5 border-t border-slate-200/70">
+                    <span className="text-slate-800">
+                      {ann.department ? `FROM ${ann.department}` : `(Emergency Contact for Parking-7087110581 & Transport-7087039349)`}
+                    </span>
                   </div>
                 </div>
               ))}
             </div>
-
           </div>
         </div>
 
       </div>
 
-      {/* Bottom Contact Footer Banner */}
-      <div className="bg-[#1f2937] text-white py-3 px-4 rounded-xl shadow-xs text-xs flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left mt-6">
-        <div className="font-semibold text-slate-200">
-          Chandigarh University, Gharuan, Mohali (Punjab) | 📞 <span className="font-bold text-white">Helpline:</span> 1800 257 1800 | ✉️ <span className="font-bold text-white">Email:</span> studentcare@cumail.in
-        </div>
-        <div className="text-red-400 font-bold hover:underline cursor-pointer flex-shrink-0">
-          Report a Bug 🚩
-        </div>
-      </div>
-
     </div>
   );
 };
-

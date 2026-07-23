@@ -22,7 +22,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   const isHostelActive = activeTab === 'hostel-details' || activeTab === 'hostel-refund';
 
   return (
-    <aside id="uims_sidebar" className="uims-sidebar swipe w-[260px] bg-white border-r border-gray-200 flex-shrink-0 h-full overflow-y-auto custom-scrollbar select-none text-[14px] font-normal py-2 shadow-xs transition-all font-['Arial',sans-serif]">
+    <aside id="uims_sidebar" className="uims-sidebar swipe w-[260px] bg-white border-r border-gray-200 flex-shrink-0 h-full overflow-y-auto custom-scrollbar select-none text-[14px] font-normal py-2 shadow-xs transition-all font-sans">
       <div className="scroll-wrapper scroll-bar" style={{ position: 'relative' }}>
         <div className="scroll-bar scroll-content scroll-scrolly_visible" style={{ height: 'auto', marginBottom: '0px', marginRight: '0px' }}>
           <ul id="menu-content" className="menu-content flex flex-col space-y-0.5">
@@ -193,7 +193,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                     <a
                       href="#"
                       onClick={(e) => { e.preventDefault(); onSelectTab('hostel-details'); }}
-                      className={`block w-full text-left pl-8 pr-4 py-1.5 text-[14px] flex items-center transition-colors font-['Arial',sans-serif] group hover:bg-[#485f8b] hover:text-white ${
+                      className={`block w-full text-left pl-8 pr-4 py-1.5 text-[14px] flex items-center transition-colors font-sans group hover:bg-[#485f8b] hover:text-white ${
                         activeTab === 'hostel-details' 
                           ? 'font-bold text-[#001a4d] bg-blue-50/80 border-l-4 border-[#103260]' 
                           : 'text-[#001a4d] font-normal'
@@ -209,7 +209,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                     <a
                       href="#"
                       onClick={(e) => { e.preventDefault(); onSelectTab('hostel-refund'); }}
-                      className={`block w-full text-left pl-8 pr-4 py-1.5 text-[14px] flex items-center transition-colors font-['Arial',sans-serif] group hover:bg-[#485f8b] hover:text-white ${
+                      className={`block w-full text-left pl-8 pr-4 py-1.5 text-[14px] flex items-center transition-colors font-sans group hover:bg-[#485f8b] hover:text-white ${
                         activeTab === 'hostel-refund' 
                           ? 'font-bold text-[#001a4d] bg-blue-50/80 border-l-4 border-[#103260]' 
                           : 'text-[#001a4d] font-normal'

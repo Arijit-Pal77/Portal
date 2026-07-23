@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onOpenProfile, 
   };
 
   return (
-    <header className="bg-white border-b border-[#e5e5e5] sticky top-0 z-40 flex items-center h-[75px] shadow-sm font-['Arial',sans-serif]">
+    <header className="bg-white border-b border-[#e5e5e5] sticky top-0 z-40 flex items-center h-[75px] shadow-sm font-sans">
       {/* Left Group: Menu, Logo, Search Bar */}
       <div className="flex items-center pl-4 h-full">
         <button 
@@ -52,7 +52,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onOpenProfile, 
             <small id="s-total-search"></small>
             <input 
               type="text" 
-              className="inp-box w-full bg-[#f1f1f1] text-[#333333] placeholder-[#5f7596] text-[14px] font-['Arial',sans-serif] py-2.5 pl-5 pr-12 rounded-full focus:outline-none transition-all border-none"
+              className="inp-box w-full bg-[#f1f1f1] text-[#333333] placeholder-[#5f7596] text-[14px] font-sans py-2.5 pl-5 pr-12 rounded-full focus:outline-none transition-all border-none"
               autocomplete="off"
               id="txtUserSearch001_PC"
               placeholder="Search & Bookmark your page"
@@ -75,20 +75,32 @@ export const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onOpenProfile, 
         <div className="flex items-center space-x-7 pr-7 hidden md:flex">
           <div className="all-notifications flex items-center justify-between w-[65.5px] h-[22px]">
             <button className="cursor-pointer hover:text-blue-600 transition-colors" title="Notifications" id="notifications-btn">
-              <Bell className="w-[22px] h-[22px] text-[#888] stroke-[2]" />
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#757575" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
             </button>
             
             <button className="cursor-pointer hover:text-blue-600 transition-colors" title="E-Resources" id="resources-btn">
-              <BookOpen className="w-[22px] h-[22px] text-[#888] stroke-[2]" />
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#757575" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 4v16" />
+                <path d="M12 4H6a2.5 2.5 0 0 0-2.5 2.5v11A2.5 2.5 0 0 0 6 20h6" />
+                <path d="M12 4h6a2.5 2.5 0 0 1 2.5 2.5v11a2.5 2.5 0 0 1-2.5 2.5h-6" />
+              </svg>
             </button>
           </div>
           
           <button onClick={onGoHome} className="cursor-pointer hover:text-blue-600 transition-colors" title="Home Dashboard" id="home-nav-btn">
-            <Home className="w-[22px] h-[22px] text-[#888] stroke-[2]" />
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#757575" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 10L12 3l8 7v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10z" />
+            </svg>
           </button>
           
           <button className="cursor-pointer hover:text-blue-600 transition-colors" title="Settings" id="settings-btn">
-            <Settings className="w-[22px] h-[22px] text-[#888] stroke-[2]" />
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#757575" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
           </button>
         </div>
         

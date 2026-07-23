@@ -110,27 +110,34 @@ export default function App() {
           onToggleHostel={() => setIsHostelExpanded(!isHostelExpanded)}
         />
 
-        {/* Content Canvas */}
-        <main className="flex-1 overflow-y-auto custom-scrollbar p-4 sm:p-5 transition-all w-full">
-          {renderMainContent()}
-        </main>
-      </div>
+        <div className="flex-1 flex flex-col min-w-0 bg-slate-50 relative overflow-hidden">
+          <main className="flex-1 overflow-y-auto custom-scrollbar transition-all w-full flex flex-col">
+            <div className="flex-1 p-4 sm:p-5 min-h-max">
+              {renderMainContent()}
+            </div>
 
-      {/* Fixed Footer at the bottom */}
-      <footer className="shrink-0 h-[38px] flex bg-[#f3f5f9]">
-        {isSidebarOpen && (
-          <div className="w-[260px] bg-[#34465d] flex items-center justify-end pr-4 text-[#e74c3c] text-[13px] font-medium cursor-pointer rounded-tr-lg shrink-0">
-             Report a Bug <Bug size={14} className="ml-1.5" />
-          </div>
-        )}
-        <div className={`flex-1 bg-[#34465d] flex items-center px-4 text-white text-[13px] ${isSidebarOpen ? 'ml-1 rounded-tl-lg' : 'rounded-t-lg'}`}>
-           <span className="font-semibold">Chandigarh University, Gharuan, Mohali (Punjab)</span>
-           <span className="mx-2 text-gray-400">|</span>
-           <Phone className="w-3.5 h-3.5 mr-1 text-[#e83e8c]" fill="currentColor" /> <span className="font-semibold mr-1">Helpline:</span> 1800 257 1800
-           <span className="mx-2 text-gray-400">|</span>
-           <Mail className="w-3.5 h-3.5 mr-1 text-[#e0e0e0]" fill="currentColor" /> <span className="font-semibold mr-1">Email:</span> studentcare@cumail.in
+            {/* Footer at the bottom of the main content */}
+            <footer id="footer" className="w-full shrink-0 pb-4 px-4 sm:px-5 mt-auto">
+              <div className="footer-content relative">
+                <div style={{ fontFamily: 'Arial, sans-serif', background: '#2c3e50', color: '#fff', padding: '12px 20px', borderRadius: '8px', textAlign: 'center', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} className="text-[13px] flex items-center justify-center flex-wrap">
+                   <span className="font-semibold tracking-wide">Chandigarh University, Gharuan, Mohali (Punjab)</span>
+                   <span className="mx-2.5 text-gray-400">|</span>
+                   <Phone className="w-[14px] h-[14px] mr-1 text-[#e83e8c]" fill="currentColor" strokeWidth={1} /> 
+                   <span className="font-bold mr-1">Helpline:</span> 
+                   <span>1800 257 1800</span>
+                   <span className="mx-2.5 text-gray-400">|</span>
+                   <Mail className="w-[14px] h-[14px] mr-1 text-[#e0e0e0]" fill="currentColor" strokeWidth={1} /> 
+                   <span className="font-bold mr-1">Email:</span> 
+                   <span>studentcare@cumail.in</span>
+                </div>
+                <a href="#" id="a_bugreport" title="Report a bug" className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center text-[#ff4d4d] font-semibold cursor-pointer hover:text-red-400 transition-colors text-[13px]">
+                  Report a Bug <Bug size={14} className="ml-1" />
+                </a>
+              </div>
+            </footer>
+          </main>
         </div>
-      </footer>
+      </div>
     </div>
   );
 }
