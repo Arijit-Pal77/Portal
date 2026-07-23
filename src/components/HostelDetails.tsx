@@ -94,64 +94,59 @@ export const HostelDetails: React.FC = () => {
             <div className="absolute top-2 left-2 bg-[#001e36] text-[#31a8ff] text-[11px] font-black px-2 py-0.5 rounded-sm shadow-md border border-sky-600/30">
               Ps
             </div>
-            <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent p-3 text-white text-xs">
-              <span className="font-bold block text-sm">Zakir B</span>
-              <span className="text-slate-200 text-[10px]">Chandigarh University Resident Housing</span>
-            </div>
+
           </div>
 
           {/* Details Table Column (7 cols) */}
           <div className="md:col-span-7">
-            <div className="border border-slate-200 rounded-xl overflow-hidden divide-y divide-slate-200 text-xs sm:text-sm">
+            <div className="border border-[#e2e2e2] overflow-hidden divide-y divide-[#e2e2e2] text-[14px]">
               
               {/* Hostel Status */}
-              <div className="grid grid-cols-12 bg-white hover:bg-slate-50 transition-colors">
-                <div className="col-span-5 p-3.5 sm:p-4 font-bold text-slate-800 bg-[#f8fafc] border-r border-slate-200 flex items-center">
+              <div className="grid grid-cols-2 bg-white">
+                <div className="p-4 font-bold text-[#333333] bg-[#f2f2f2] border-r border-[#e2e2e2] flex items-center">
                   Hostel Status
                 </div>
-                <div className="col-span-7 p-3.5 sm:p-4 text-center font-medium text-slate-900 flex items-center justify-center">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
-                    {hostelData.status}
-                  </span>
+                <div className="p-4 text-center text-[#555555] flex items-center justify-center">
+                  {hostelData.status}
                 </div>
               </div>
 
               {/* Seater */}
-              <div className="grid grid-cols-12 bg-white hover:bg-slate-50 transition-colors">
-                <div className="col-span-5 p-3.5 sm:p-4 font-bold text-slate-800 bg-[#f8fafc] border-r border-slate-200 flex items-center">
+              <div className="grid grid-cols-2 bg-white">
+                <div className="p-4 font-bold text-[#333333] bg-[#f2f2f2] border-r border-[#e2e2e2] flex items-center">
                   Seater
                 </div>
-                <div className="col-span-7 p-3.5 sm:p-4 text-center font-medium text-slate-900 flex items-center justify-center">
+                <div className="p-4 text-center text-[#555555] flex items-center justify-center">
                   {hostelData.seater}
                 </div>
               </div>
 
               {/* Hostel Name */}
-              <div className="grid grid-cols-12 bg-white hover:bg-slate-50 transition-colors">
-                <div className="col-span-5 p-3.5 sm:p-4 font-bold text-slate-800 bg-[#f8fafc] border-r border-slate-200 flex items-center">
+              <div className="grid grid-cols-2 bg-white">
+                <div className="p-4 font-bold text-[#333333] bg-[#f2f2f2] border-r border-[#e2e2e2] flex items-center">
                   Hostel Name
                 </div>
-                <div className="col-span-7 p-3.5 sm:p-4 text-center font-bold text-slate-900 flex items-center justify-center">
+                <div className="p-4 text-center text-[#555555] flex items-center justify-center">
                   {hostelData.hostelName}
                 </div>
               </div>
 
               {/* Room No */}
-              <div className="grid grid-cols-12 bg-white hover:bg-slate-50 transition-colors">
-                <div className="col-span-5 p-3.5 sm:p-4 font-bold text-slate-800 bg-[#f8fafc] border-r border-slate-200 flex items-center">
+              <div className="grid grid-cols-2 bg-white">
+                <div className="p-4 font-bold text-[#333333] bg-[#f2f2f2] border-r border-[#e2e2e2] flex items-center">
                   Room No
                 </div>
-                <div className="col-span-7 p-3.5 sm:p-4 text-center font-extrabold text-indigo-900 flex items-center justify-center">
+                <div className="p-4 text-center text-[#555555] flex items-center justify-center">
                   {hostelData.roomNo}
                 </div>
               </div>
 
               {/* Hostel Reporting Status */}
-              <div className="grid grid-cols-12 bg-white hover:bg-slate-50 transition-colors">
-                <div className="col-span-5 p-3.5 sm:p-4 font-bold text-slate-800 bg-[#f8fafc] border-r border-slate-200 flex items-center">
+              <div className="grid grid-cols-2 bg-white">
+                <div className="p-4 font-bold text-[#333333] bg-[#f2f2f2] border-r border-[#e2e2e2] flex items-center">
                   Hostel Reporting Status
                 </div>
-                <div className="col-span-7 p-3.5 sm:p-4 text-center font-medium text-slate-900 flex items-center justify-center">
+                <div className="p-4 text-center text-[#555555] flex items-center justify-center">
                   {hostelData.reportingStatus}
                 </div>
               </div>

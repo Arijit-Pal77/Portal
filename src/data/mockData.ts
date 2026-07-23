@@ -35,7 +35,7 @@ export const hostelData: HostelInfo = {
   hostelName: 'Zakir B',
   roomNo: '805-B',
   reportingStatus: 'Reported on Jul 13 2026 9:33PM',
-  imageUrl: 'https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&q=80&w=1000', // Modern high-rise campus building
+  imageUrl: '/hostel-cu.png',
 };
 
 export const courseAttendanceList: CourseAttendance[] = [
