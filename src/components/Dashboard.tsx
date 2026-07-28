@@ -198,10 +198,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
                 <span>Downloading...</span>
               </>
             ) : (
-              <>
-                <Download className="w-4 h-4 text-[#2a385b]" />
-                <span>Download Now</span>
-              </>
+              <span>Download Now</span>
             )}
           </button>
         </div>
