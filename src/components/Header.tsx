@@ -111,7 +111,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onOpenProfile, 
         >
           <div 
             onClick={handleProfileClick}
-            className="flex items-center space-x-2 sm:space-x-3 sm:bg-[#f0f0f0] sm:border-l sm:border-[#444] h-full sm:px-5 pr-4 cursor-pointer hover:bg-gray-100 sm:hover:bg-[#e8e8e8] transition-colors"
+            className="flex items-center space-x-2 sm:space-x-3 sm:bg-[#f0f0f0] h-full sm:px-5 pr-4 cursor-pointer hover:bg-gray-100 sm:hover:bg-[#e8e8e8] transition-colors"
             id="user-profile-badge"
           >
             {/* User Text on the left */}
