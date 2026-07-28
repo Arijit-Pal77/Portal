@@ -12,6 +12,18 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onOpenProfile, onGoHome }) => {
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const { photo } = useStudentPhoto();
+  const timeoutRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIsProfileMenuOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsProfileMenuOpen(false);
+    }, 300);
+  };
 
   const handleProfileClick = () => {
     setIsProfileMenuOpen(false);
@@ -34,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onOpenProfile, 
         {/* CUIMS Official Logo */}
         <div 
           onClick={onGoHome}
-          className="flex items-center cursor-pointer select-none ml-2 mr-8"
+          className="flex items-center cursor-pointer select-none ml-2 sm:ml-2 mr-2 sm:mr-8"
           title="Chandigarh University Information Management System"
           id="cuims-brand-logo"
         >
@@ -42,26 +54,23 @@ export const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onOpenProfile, 
             id="img_logo"
             src="/logo.png" 
             alt="CUIMS Logo" 
-            className="w-[115px] h-[60.4px] object-contain" 
+            className="w-[90px] sm:w-[115px] h-[48px] sm:h-[60.4px] object-contain" 
           />
         </div>
 
         {/* Search Bar */}
-        <div className="hidden md:flex items-center page-search pull-left w-[420px] h-[74px]">
+        <div className="hidden lg:flex items-center page-search w-[420px] h-[74px]">
           <div className="page-search-input relative w-full">
             <small id="s-total-search"></small>
             <input 
               type="text" 
               className="inp-box w-full bg-[#f1f1f1] text-[#333333] placeholder-[#5f7596] text-[14px] font-sans py-2.5 pl-5 pr-12 rounded-full focus:outline-none transition-all border-none"
-              autocomplete="off"
+              autoComplete="off"
               id="txtUserSearch001_PC"
               placeholder="Search & Bookmark your page"
             />
             <Search className="w-[18px] h-[18px] text-[#555555] stroke-[2.5] absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
-            <img src="/loader.gif" id="menu-loading" className="hidden" alt="loading" />
-            <span id="close-mob-search" className="close-s hidden">...</span>
           </div>
-          <div className="NavigationSearchPC"></div>
         </div>
       </div>
 
@@ -72,47 +81,37 @@ export const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onOpenProfile, 
       <div className="flex items-center h-full">
         
         {/* Icons */}
-        <div className="flex items-center space-x-7 pr-7 hidden md:flex">
-          <div className="all-notifications flex items-center justify-between w-[65.5px] h-[22px]">
-            <button className="cursor-pointer hover:text-blue-600 transition-colors" title="Notifications" id="notifications-btn">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#757575" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-              </svg>
-            </button>
-            
-            <button className="cursor-pointer hover:text-blue-600 transition-colors" title="E-Resources" id="resources-btn">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#757575" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 4v16" />
-                <path d="M12 4H6a2.5 2.5 0 0 0-2.5 2.5v11A2.5 2.5 0 0 0 6 20h6" />
-                <path d="M12 4h6a2.5 2.5 0 0 1 2.5 2.5v11a2.5 2.5 0 0 1-2.5 2.5h-6" />
-              </svg>
-            </button>
-          </div>
-          
-          <button onClick={onGoHome} className="cursor-pointer hover:text-blue-600 transition-colors" title="Home Dashboard" id="home-nav-btn">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#757575" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M4 10L12 3l8 7v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10z" />
-            </svg>
+        <div className="flex items-center space-x-3 sm:space-x-5 lg:space-x-7 pr-3 sm:pr-5 lg:pr-7 text-[#555]">
+          <button className="cursor-pointer hover:text-blue-600 transition-colors lg:hidden" title="Search">
+            <Search className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" strokeWidth={1.5} />
           </button>
           
-          <button className="cursor-pointer hover:text-blue-600 transition-colors" title="Settings" id="settings-btn">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#757575" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-            </svg>
+          <button className="cursor-pointer hover:text-blue-600 transition-colors" title="Notifications">
+            <Bell className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" strokeWidth={1.5} />
+          </button>
+          
+          <button className="cursor-pointer hover:text-blue-600 transition-colors" title="E-Resources">
+            <BookOpen className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" strokeWidth={1.5} />
+          </button>
+          
+          <button onClick={onGoHome} className="cursor-pointer hover:text-blue-600 transition-colors" title="Home Dashboard">
+            <Home className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" strokeWidth={1.5} />
+          </button>
+          
+          <button className="cursor-pointer hover:text-blue-600 transition-colors" title="Settings">
+            <Settings className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px]" strokeWidth={1.5} />
           </button>
         </div>
         
         {/* User Profile */}
         <div 
-          className="relative group h-full"
-          onMouseEnter={() => setIsProfileMenuOpen(true)}
-          onMouseLeave={() => setIsProfileMenuOpen(false)}
+          className="relative group h-full flex items-center"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <div 
             onClick={handleProfileClick}
-            className="flex items-center space-x-3 bg-[#f0f0f0] border-l border-[#444] h-full px-5 cursor-pointer hover:bg-[#e8e8e8] transition-colors"
+            className="flex items-center space-x-2 sm:space-x-3 sm:bg-[#f0f0f0] sm:border-l sm:border-[#444] h-full sm:px-5 pr-4 cursor-pointer hover:bg-gray-100 sm:hover:bg-[#e8e8e8] transition-colors"
             id="user-profile-badge"
           >
             {/* User Text on the left */}
@@ -130,7 +129,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleSidebar, onOpenProfile, 
               <img 
                 src={photo} 
                 alt={studentData.name}
-                className="w-[42px] h-[42px] rounded-full object-cover"
+                className="w-[36px] h-[36px] sm:w-[42px] sm:h-[42px] rounded-full object-cover"
               />
             </div>
           </div>

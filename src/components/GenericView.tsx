@@ -93,16 +93,8 @@ export const GenericView: React.FC<GenericViewProps> = ({ title, description }) 
         <h2 className="text-base font-bold tracking-wide">{title}</h2>
       </div>
 
-      {/* Main Card */}
-      <div className="bg-white rounded-2xl border border-slate-100 shadow-xs p-8 text-center space-y-3 min-h-[300px] flex flex-col items-center justify-center">
-        <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-2">
-          <GraduationCap className="w-6 h-6" />
-        </div>
-        <h3 className="text-base font-bold text-slate-800">{title} Portal Module</h3>
-        <p className="text-xs text-slate-500 max-w-md mx-auto leading-relaxed">
-          {description || `All records and active forms for ${title} under student ID 25BAI70040 are verified and synchronized.`}
-        </p>
-      </div>
+      {/* Content Area - Left blank for unimplemented sections */}
+      <div className="flex-1 min-h-[300px]"></div>
 
     </div>
   );

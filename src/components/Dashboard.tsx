@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { 
-  Cloud, 
-  ExternalLink, 
-  PlayCircle, 
-  XCircle, 
-  GraduationCap, 
-  Mail, 
-  UserCheck, 
+import {
+  Cloud,
+  ExternalLink,
+  PlayCircle,
+  XCircle,
+  GraduationCap,
+  Mail,
+  UserCheck,
   HelpCircle,
-  Search, 
-  Pin, 
-  FileText, 
-  Calendar, 
+  Search,
+  Pin,
+  FileText,
+  Calendar,
   Clock,
   Briefcase,
   Bell,
@@ -43,8 +43,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
   };
 
   const filteredAnnouncements = announcementsList.filter(ann => {
-    const matchesSearch = ann.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          ann.content.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = ann.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      ann.content.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesSearch;
   });
 
@@ -52,10 +52,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
     <div className="space-y-4 pb-8 text-slate-800">
 
       {/* Top 5 Quick Action Cards Row - Matching exact CUIMS CSS specifications and DOM structure */}
-      <div id="short_links" className="shortLinks flex flex-wrap gap-y-4 -mx-2 mb-2">
+      <div id="short_links" className="shortLinks grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-4">
         {/* Important Links */}
-        <div id="div_top_1" className="w-1/2 sm:w-1/3 lg:w-1/5 px-2 col-sm-2 col-xs-6 padd-r-0 shortLinks__item">
-          <a href="#" className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
+        <div id="div_top_1" className="shortLinks__item">
+          <a href="#" className="bg-white rounded-[10px] p-4 sm:p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
             <div className="flex flex-col justify-center">
               <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">Important Links</h6>
               <div className="mt-[6px]">
@@ -71,8 +71,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
         </div>
 
         {/* Student Facilitation */}
-        <div id="div_top_3" className="w-1/2 sm:w-1/3 lg:w-1/5 px-2 col-sm-2 col-xs-6 padd-r-0 shortLinks__item">
-          <a href="#" className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
+        <div id="div_top_3" className="shortLinks__item">
+          <a href="#" className="bg-white rounded-[10px] p-4 sm:p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
             <div className="flex flex-col justify-center">
               <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">Student Facilitation</h6>
               <div className="mt-[6px]">
@@ -88,8 +88,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
         </div>
 
         {/* Anti Ragging */}
-        <div id="div_top_5" className="w-1/2 sm:w-1/3 lg:w-1/5 px-2 col-sm-2 col-xs-6 padd-r-0 shortLinks__item">
-          <a href="#" className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
+        <div id="div_top_5" className="shortLinks__item">
+          <a href="#" className="bg-white rounded-[10px] p-4 sm:p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
             <div className="flex flex-col justify-center">
               <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">Anti Ragging</h6>
               <div className="mt-[6px]">
@@ -105,8 +105,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
         </div>
 
         {/* CU LMS */}
-        <div id="div_top_5" className="w-1/2 sm:w-1/3 lg:w-1/5 px-2 col-sm-2 col-xs-6 padd-r-0 shortLinks__item">
-          <a href="#" className="bg-[#124f85] rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.15)] flex items-center justify-between hover:brightness-105 transition-all min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
+        <div id="div_top_6" className="shortLinks__item">
+          <a href="#" className="bg-[#124f85] rounded-[10px] p-4 sm:p-5 shadow-[0_4px_12px_rgba(0,0,0,0.15)] flex items-center justify-between hover:brightness-105 transition-all min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
             <div className="flex flex-col justify-center">
               <h6 className="text-[15.5px] font-bold text-white leading-tight tracking-tight">CU LMS</h6>
               <div className="mt-[6px]">
@@ -122,8 +122,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
         </div>
 
         {/* My University Email */}
-        <div id="div_QF" className="w-1/2 sm:w-1/3 lg:w-1/5 px-2 col-sm-2 col-xs-6 padd-l-0 shortLinks__item">
-          <a href="#" className="bg-white rounded-[10px] p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
+        <div id="div_QF" className="shortLinks__item">
+          <a href="#" className="bg-white rounded-[10px] p-4 sm:p-5 shadow-[0_4px_12px_rgba(0,0,0,0.08)] flex items-center justify-between hover:shadow-lg transition-shadow min-h-[110px] font-['Segoe_UI',sans-serif] block waves-effect waves-red box-shadow-common">
             <div className="flex flex-col justify-center">
               <h6 className="text-[15px] font-bold text-[#001a4d] leading-tight tracking-tight">My University Email</h6>
               <div className="mt-[6px]">
@@ -155,13 +155,13 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
 
           {/* Center Cloud Icon */}
           <div className="flex items-center justify-center">
-            <svg 
-              className="w-9 h-9 sm:w-10 sm:h-10 text-white" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
+            <svg
+              className="w-9 h-9 sm:w-10 sm:h-10 text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
               strokeLinejoin="round"
             >
               <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
@@ -186,7 +186,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
               Download Virtual ID Card
             </h3>
           </div>
-          <button 
+          <button
             onClick={handleDownloadPdf}
             disabled={isDownloading}
             className="bg-[#e8f4fe] hover:bg-[#d6e8fa] active:bg-[#c2e0f9] text-[#2a385b] font-semibold text-[15px] px-6 py-2.5 rounded-[12px] transition-colors cursor-pointer flex-shrink-0 ml-2 font-['Segoe_UI',sans-serif] flex items-center space-x-2 disabled:opacity-75"
@@ -209,10 +209,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
 
       {/* Main 3-Column Grid Arrangement matching actual CUIMS layout */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        
+
         {/* COLUMN 1: Important Message, Mentor Details, My Question Or Queries */}
         <div className="space-y-4">
-          
+
           {/* 1. Important Message */}
           <div className="bg-white rounded-[12px] p-6 sm:p-8 min-h-[340px] border border-[#e2e2e2] shadow-sm">
             <h3 className="text-[17px] font-bold text-[#2a4365] mb-4 font-['Open_Sans',sans-serif]">Important Message</h3>
@@ -249,7 +249,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
 
         {/* COLUMN 2: My Course & Attendance, Upcoming Events, Job Alert */}
         <div className="space-y-4">
-          
+
           {/* 1. My Course & Attendance */}
           <div className="bg-white rounded-[4px] p-5 border border-[#e2e2e2] shadow-sm">
             <h3 className="text-xl font-bold text-[#103260] mb-3 font-['Open_Sans',_sans-serif]">
@@ -314,16 +314,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
           {/* Search & Filter */}
           <div className="flex space-x-2 mb-4 flex-shrink-0">
             <div className="relative flex-1">
-              <input 
-                type="text" 
-                placeholder="Search Announcement" 
+              <input
+                type="text"
+                placeholder="Search Announcement"
                 className="w-full pl-3 pr-8 py-1.5 bg-[#f0f0f0] border border-transparent rounded-[20px] text-[12.5px] outline-none focus:bg-white focus:border-slate-300 focus:ring-1 focus:ring-[#103260]/20 transition-all placeholder-slate-500 text-slate-700"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
               <Search className="w-3.5 h-3.5 absolute right-3 top-1/2 -translate-y-1/2 text-slate-500" />
             </div>
-            <select 
+            <select
               className="bg-[#f0f0f0] border-none text-[12px] font-semibold text-slate-700 rounded-[20px] px-4 py-1.5 outline-none cursor-pointer focus:ring-1 focus:ring-[#103260]/20"
               value={announcementFilter}
               onChange={(e) => setAnnouncementFilter(e.target.value)}
@@ -357,9 +357,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ onGoToIDCard, onGoToHostel
                   </div>
 
                   {/* Body HTML */}
-                  <div 
+                  <div
                     className="text-[11px] leading-relaxed text-slate-700 pt-1 html-content"
-                    dangerouslySetInnerHTML={{ __html: ann.content }} 
+                    dangerouslySetInnerHTML={{ __html: ann.content }}
                   />
 
                   {/* Attachment if present */}

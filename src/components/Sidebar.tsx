@@ -6,64 +6,177 @@ interface SidebarProps {
   activeTab: NavTab;
   onSelectTab: (tab: NavTab) => void;
   isOpen: boolean;
-  isHostelExpanded: boolean;
-  onToggleHostel: () => void;
+  expandedMenus: string[];
+  onToggleMenu: (menu: string) => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
   activeTab,
   onSelectTab,
   isOpen,
-  isHostelExpanded,
-  onToggleHostel,
+  expandedMenus,
+  onToggleMenu,
 }) => {
-  if (!isOpen) return null;
-
   const isHostelActive = activeTab === 'hostel-details' || activeTab === 'hostel-refund';
+  const isAcademicsActive = ['academics', 'dll', 'attendance', 'attendance-acp', 'courses', 'timetable', 'timetable-acp', 'project', 'resource-library', 'social-internship'].includes(activeTab);
+  const isAccountsActive = ['accounts', 'accounts-receipt', 'accounts-statement', 'fee-submission'].includes(activeTab);
+  const isAdminActive = ['administration', 'admission-referral', 'cge', 'complaint-harassment', 'document-upload', 'golf-cart', 'international-student', 'medical-insurance'].includes(activeTab);
+  const isCswActive = ['csw', 'mentoring'].includes(activeTab);
+  const isDcpdActive = ['dcpd', 'dcpd-career', 'dcpd-assessments', 'dcpd-exams', 'dcpd-content', 'dcpd-events', 'dcpd-magazines', 'dcpd-policies', 'evening-cucat'].includes(activeTab);
+  const isElibraryActive = ['elibrary', 'ebsco-ebook', 'ebsco-management', 'ebsco-ejournal', 'ieee', 'jgate-science', 'jgate-soc', 'publication-finder', 'web-of-science'].includes(activeTab);
+  const isLibraryActive = ['library', 'library-repository', 'library-discussion'].includes(activeTab);
+  const isLeaveActive = ['leave-application', 'leave-duty', 'leave-general', 'leave-medical'].includes(activeTab);
+  const isSrmsActive = ['srms', 'srms-clubs', 'srms-event', 'srms-care', 'srms-talent'].includes(activeTab);
+  const isTransportActive = ['transport', 'transport-details', 'transport-consent-1', 'transport-consent-2'].includes(activeTab);
+
+  const isAcademicsExpanded = expandedMenus.includes('academics');
+  const isAccountsExpanded = expandedMenus.includes('accounts');
+  const isAdminExpanded = expandedMenus.includes('administration');
+  const isCswExpanded = expandedMenus.includes('csw');
+  const isDcpdExpanded = expandedMenus.includes('dcpd');
+  const isElibraryExpanded = expandedMenus.includes('elibrary');
+  const isHostelExpanded = expandedMenus.includes('hostel');
+  const isLibraryExpanded = expandedMenus.includes('library');
+  const isLeaveExpanded = expandedMenus.includes('leave-application');
+  const isSrmsExpanded = expandedMenus.includes('srms');
+  const isTransportExpanded = expandedMenus.includes('transport');
+  const isDllExpanded = expandedMenus.includes('dll');
+  const isProjectExpanded = expandedMenus.includes('project');
+
+  const renderSubItem = (tabId: NavTab, title: string, hasArrow: boolean = false) => (
+    <li key={tabId}>
+      <a
+        href="#"
+        onClick={(e) => { e.preventDefault(); onSelectTab(tabId); }}
+        className={`block w-full text-left pl-8 pr-4 py-1.5 text-[14px] flex items-center transition-colors font-sans group hover:bg-[#485f8b] hover:text-white ${
+          activeTab === tabId ? 'font-bold text-[#001a4d] bg-blue-50/80 border-l-4 border-[#103260]' : 'text-[#3b4a6b] font-normal'
+        }`}
+      >
+        <span className="font-bold mr-2 text-[#3b4a6b] group-hover:text-white">–</span>
+        <span>{title}</span>
+        {hasArrow && <ChevronRight className="w-4 h-4 ml-auto text-slate-400 group-hover:text-white" />}
+      </a>
+    </li>
+  );
+
+  const renderDropdownHeader = (title: string, menuKey: string, isActive: boolean, isExpanded: boolean) => (
+    <a 
+      href="#"
+      onClick={(e) => { e.preventDefault(); onToggleMenu(menuKey); }}
+      className={`w-full flex items-center justify-between px-4 py-2 transition-colors text-left group hover:bg-[#485f8b] hover:text-white ${
+        isActive ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'
+      }`}
+    >
+      <span>{title}</span>
+      {isExpanded ? (
+        <ChevronDown className={`w-4 h-4 text-[#001a4d] group-hover:text-white`} />
+      ) : (
+        <ChevronRight className={`w-4 h-4 text-[#001a4d] group-hover:text-white`} />
+      )}
+    </a>
+  );
+
+  const renderNestedDropdownHeader = (title: string, menuKey: string, isActive: boolean, isExpanded: boolean) => (
+    <li>
+      <a 
+        href="#"
+        onClick={(e) => { e.preventDefault(); onToggleMenu(menuKey); }}
+        className={`block w-full text-left pl-8 pr-4 py-1.5 text-[14px] flex items-center justify-between transition-colors font-sans group hover:bg-[#485f8b] hover:text-white ${
+          isActive ? 'font-bold text-[#001a4d] bg-blue-50/80 border-l-4 border-[#103260]' : 'text-[#3b4a6b] font-normal'
+        }`}
+      >
+        <div className="flex items-center">
+          <span className={`font-bold mr-2 ${isActive ? 'text-[#001a4d]' : 'text-[#3b4a6b]'} group-hover:text-white`}>–</span>
+          <span>{title}</span>
+        </div>
+        {isExpanded ? (
+          <ChevronDown className="w-4 h-4 ml-auto text-slate-400 group-hover:text-white" />
+        ) : (
+          <ChevronRight className="w-4 h-4 ml-auto text-slate-400 group-hover:text-white" />
+        )}
+      </a>
+    </li>
+  );
+
+  const renderNestedSubItem = (tabId: NavTab, title: string) => (
+    <li key={tabId}>
+      <a
+        href="#"
+        onClick={(e) => { e.preventDefault(); onSelectTab(tabId); }}
+        className={`block w-full text-left pl-12 pr-4 py-1.5 text-[14px] flex items-center transition-colors font-sans group hover:bg-[#485f8b] hover:text-white ${
+          activeTab === tabId ? 'font-bold text-[#001a4d] bg-blue-50/80 border-l-4 border-[#103260]' : 'text-[#3b4a6b] font-normal'
+        }`}
+      >
+        <span className="font-bold mr-2 text-[#3b4a6b] group-hover:text-white">–</span>
+        <span>{title}</span>
+      </a>
+    </li>
+  );
 
   return (
-    <aside id="uims_sidebar" className="uims-sidebar swipe w-[260px] bg-white border-r border-gray-200 flex-shrink-0 h-full overflow-y-auto custom-scrollbar select-none text-[14px] font-normal py-2 shadow-xs transition-all font-sans">
+    <aside 
+      id="uims_sidebar" 
+      className={`uims-sidebar swipe w-[260px] bg-white border-r border-gray-200 flex-shrink-0 h-full overflow-y-auto custom-scrollbar select-none text-[14px] font-normal py-2 shadow-xs transition-transform duration-300 ease-in-out font-sans absolute md:relative z-40 ${isOpen ? 'translate-x-0' : '-translate-x-full md:hidden'}`}
+    >
       <div className="scroll-wrapper scroll-bar" style={{ position: 'relative' }}>
         <div className="scroll-bar scroll-content scroll-scrolly_visible" style={{ height: 'auto', marginBottom: '0px', marginRight: '0px' }}>
           <ul id="menu-content" className="menu-content flex flex-col space-y-0.5">
             
-            {/* Academics */}
+            {/* Academics Dropdown */}
             <li data-toggle="collapse" className="collapsed">
-              <a 
-                href="#"
-                onClick={(e) => { e.preventDefault(); onSelectTab('academics'); }}
-                className={`w-full flex items-center justify-between px-4 py-2 transition-colors text-left group hover:bg-[#485f8b] hover:text-white ${activeTab === 'academics' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
-                id="nav-academics"
-              >
-                <span>Academics</span>
-                <ChevronRight className="w-4 h-4 text-[#001a4d] group-hover:text-white" />
-              </a>
+              {renderDropdownHeader('Academics', 'academics', isAcademicsActive, isAcademicsExpanded)}
+              {isAcademicsExpanded && (
+                <ul className="sub-menu bg-white py-1 space-y-1">
+                  {renderNestedDropdownHeader('Department of Life Long(DLL)', 'dll', activeTab === 'dll' || activeTab === 'dll-proficiency', isDllExpanded)}
+                  {isDllExpanded && (
+                    <ul className="sub-menu space-y-1">
+                      {renderNestedSubItem('dll-proficiency', 'General Proficiency Choice')}
+                    </ul>
+                  )}
+                  {renderSubItem('attendance', 'My Attendance')}
+                  {renderSubItem('attendance-acp', 'My Attendance ACP/Winning Camp')}
+                  {renderSubItem('courses', 'My Courses and Lecture Plan')}
+                  {renderSubItem('timetable', 'My Time Table')}
+                  {renderSubItem('timetable-acp', 'My Time Table ACP/Winning Camp')}
+                  {renderNestedDropdownHeader('Project', 'project', activeTab === 'project' || activeTab === 'project-dashboard' || activeTab === 'project-request', isProjectExpanded)}
+                  {isProjectExpanded && (
+                    <ul className="sub-menu space-y-1">
+                      {renderNestedSubItem('project-dashboard', 'Project Dashboard for Student')}
+                      {renderNestedSubItem('project-request', 'Project Request')}
+                    </ul>
+                  )}
+                  {renderSubItem('resource-library', 'Resource Library')}
+                  {renderSubItem('social-internship', 'Social Internship', true)}
+                </ul>
+              )}
             </li>
 
-            {/* Accounts */}
+            {/* Accounts Dropdown */}
             <li data-toggle="collapse" className="collapsed">
-              <a 
-                href="#"
-                onClick={(e) => { e.preventDefault(); onSelectTab('accounts'); }}
-                className={`w-full flex items-center justify-between px-4 py-2 transition-colors text-left group hover:bg-[#485f8b] hover:text-white ${activeTab === 'accounts' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
-                id="nav-accounts"
-              >
-                <span>Accounts</span>
-                <ChevronRight className="w-4 h-4 text-[#001a4d] group-hover:text-white" />
-              </a>
+              {renderDropdownHeader('Accounts', 'accounts', isAccountsActive, isAccountsExpanded)}
+              {isAccountsExpanded && (
+                <ul className="sub-menu bg-white py-1 space-y-1">
+                  {renderSubItem('accounts-receipt', 'Accounts Reciept')}
+                  {renderSubItem('accounts-statement', 'Accounts Statement/ Fee Payment')}
+                  {renderSubItem('fee-submission', 'Fee Submission Appointment')}
+                </ul>
+              )}
             </li>
 
-            {/* Administration */}
+            {/* Administration Dropdown */}
             <li data-toggle="collapse" className="collapsed">
-              <a 
-                href="#"
-                onClick={(e) => { e.preventDefault(); onSelectTab('administration'); }}
-                className={`w-full flex items-center justify-between px-4 py-2 transition-colors text-left group hover:bg-[#485f8b] hover:text-white ${activeTab === 'administration' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
-                id="nav-administration"
-              >
-                <span>Administration</span>
-                <ChevronRight className="w-4 h-4 text-[#001a4d] group-hover:text-white" />
-              </a>
+              {renderDropdownHeader('Administration', 'administration', isAdminActive, isAdminExpanded)}
+              {isAdminExpanded && (
+                <ul className="sub-menu bg-white py-1 space-y-1">
+                  {renderSubItem('admission-referral', 'Admission Referral')}
+                  {renderSubItem('cge', 'Centre for Global Education (CGE)', true)}
+                  {renderSubItem('complaint-harassment', 'Complaint Against Harassment')}
+                  {renderSubItem('document-upload', 'Document Upload')}
+                  {renderSubItem('golf-cart', 'Golf Cart Feedback')}
+                  {renderSubItem('international-student', 'International Student Application Form')}
+                  {renderSubItem('medical-insurance', 'University Medical Insurance')}
+                </ul>
+              )}
             </li>
 
             {/* Apply for Loan Documents */}
@@ -90,17 +203,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </a>
             </li>
 
-            {/* CSW */}
+            {/* CSW Dropdown */}
             <li data-toggle="collapse" className="collapsed">
-              <a 
-                href="#"
-                onClick={(e) => { e.preventDefault(); onSelectTab('csw'); }}
-                className={`w-full flex items-center justify-between px-4 py-2 transition-colors text-left group hover:bg-[#485f8b] hover:text-white ${activeTab === 'csw' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
-                id="nav-csw"
-              >
-                <span>Centre For Student Wellbeing (CSW)</span>
-                <ChevronRight className="w-4 h-4 text-[#001a4d] group-hover:text-white flex-shrink-0 ml-1" />
-              </a>
+              {renderDropdownHeader('Centre For Student Wellbeing (CSW)', 'csw', isCswActive, isCswExpanded)}
+              {isCswExpanded && (
+                <ul className="sub-menu bg-white py-1 space-y-1">
+                  {renderSubItem('mentoring', 'Mentoring')}
+                </ul>
+              )}
             </li>
 
             {/* Counseling Therapy Clinic Registration */}
@@ -115,17 +225,21 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </a>
             </li>
 
-            {/* DCPD */}
+            {/* DCPD Dropdown */}
             <li data-toggle="collapse" className="collapsed">
-              <a 
-                href="#"
-                onClick={(e) => { e.preventDefault(); onSelectTab('dcpd'); }}
-                className={`w-full flex items-center justify-between px-4 py-2 transition-colors text-left group hover:bg-[#485f8b] hover:text-white ${activeTab === 'dcpd' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
-                id="nav-dcpd"
-              >
-                <span>DCPD</span>
-                <ChevronRight className="w-4 h-4 text-[#001a4d] group-hover:text-white" />
-              </a>
+              {renderDropdownHeader('DCPD', 'dcpd', isDcpdActive, isDcpdExpanded)}
+              {isDcpdExpanded && (
+                <ul className="sub-menu bg-white py-1 space-y-1">
+                  {renderSubItem('dcpd-career', 'Career Options by DCPD')}
+                  {renderSubItem('dcpd-assessments', 'DCPD Assessments')}
+                  {renderSubItem('dcpd-exams', 'DCPD Competitive Exams')}
+                  {renderSubItem('dcpd-content', 'DCPD Content')}
+                  {renderSubItem('dcpd-events', 'DCPD Events')}
+                  {renderSubItem('dcpd-magazines', 'DCPD Magazines')}
+                  {renderSubItem('dcpd-policies', 'DCPD Policies')}
+                  {renderSubItem('evening-cucat', 'Evening CUCAT', true)}
+                </ul>
+              )}
             </li>
 
             {/* DLL MOOC Coordinator List */}
@@ -140,17 +254,21 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </a>
             </li>
 
-            {/* E Library */}
+            {/* E Library Dropdown */}
             <li data-toggle="collapse" className="collapsed">
-              <a 
-                href="#"
-                onClick={(e) => { e.preventDefault(); onSelectTab('elibrary'); }}
-                className={`w-full flex items-center justify-between px-4 py-2 transition-colors text-left group hover:bg-[#485f8b] hover:text-white ${activeTab === 'elibrary' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
-                id="nav-elibrary"
-              >
-                <span>E Library</span>
-                <ChevronRight className="w-4 h-4 text-[#001a4d] group-hover:text-white" />
-              </a>
+              {renderDropdownHeader('E Library', 'elibrary', isElibraryActive, isElibraryExpanded)}
+              {isElibraryExpanded && (
+                <ul className="sub-menu bg-white py-1 space-y-1">
+                  {renderSubItem('ebsco-ebook', 'EBSCO eBook Academic Collection')}
+                  {renderSubItem('ebsco-management', 'EBSCO Management Collection')}
+                  {renderSubItem('ebsco-ejournal', 'EBSCOhost E-Journal Access(Art and Architecture)')}
+                  {renderSubItem('ieee', 'IEEE')}
+                  {renderSubItem('jgate-science', 'J-Gate (Science & Technology)')}
+                  {renderSubItem('jgate-soc', 'J-Gate (Soc. Science and Humanities)')}
+                  {renderSubItem('publication-finder', 'Publication Finder and Open Athens')}
+                  {renderSubItem('web-of-science', 'Web of Science')}
+                </ul>
+              )}
             </li>
 
             {/* Examination */}
@@ -167,59 +285,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </li>
 
             {/* Hostel Dropdown Header */}
-            <li data-toggle="collapse" data-target="#hostel-sub-menu" className="collapsed">
-              <a 
-                href="#"
-                onClick={(e) => { e.preventDefault(); onToggleHostel(); }}
-                className={`w-full flex items-center justify-between px-4 py-2 transition-colors text-left group hover:bg-[#485f8b] hover:text-white ${
-                  isHostelActive 
-                    ? 'bg-[#103260] text-white font-semibold' 
-                    : 'text-[#001a4d]'
-                }`}
-                id="nav-hostel-dropdown"
-              >
-                <span className="font-medium">Hostel</span>
-                {isHostelExpanded ? (
-                  <ChevronDown className={`w-4 h-4 ${isHostelActive ? 'text-white' : 'text-[#001a4d] group-hover:text-white'}`} />
-                ) : (
-                  <ChevronRight className={`w-4 h-4 ${isHostelActive ? 'text-white' : 'text-[#001a4d] group-hover:text-white'}`} />
-                )}
-              </a>
-
+            <li data-toggle="collapse" className="collapsed">
+              {renderDropdownHeader('Hostel', 'hostel', isHostelActive, isHostelExpanded)}
               {/* Sub-items when Hostel is expanded */}
               {isHostelExpanded && (
-                <ul id="hostel-sub-menu" className="sub-menu bg-white py-1 space-y-1">
-                  <li>
-                    <a
-                      href="#"
-                      onClick={(e) => { e.preventDefault(); onSelectTab('hostel-details'); }}
-                      className={`block w-full text-left pl-8 pr-4 py-1.5 text-[14px] flex items-center transition-colors font-sans group hover:bg-[#485f8b] hover:text-white ${
-                        activeTab === 'hostel-details' 
-                          ? 'font-bold text-[#001a4d] bg-blue-50/80 border-l-4 border-[#103260]' 
-                          : 'text-[#001a4d] font-normal'
-                      }`}
-                      id="subnav-hostel-details"
-                    >
-                      <span className="font-bold mr-2 text-[#001a4d] group-hover:text-white">–</span>
-                      <span>Details</span>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#"
-                      onClick={(e) => { e.preventDefault(); onSelectTab('hostel-refund'); }}
-                      className={`block w-full text-left pl-8 pr-4 py-1.5 text-[14px] flex items-center transition-colors font-sans group hover:bg-[#485f8b] hover:text-white ${
-                        activeTab === 'hostel-refund' 
-                          ? 'font-bold text-[#001a4d] bg-blue-50/80 border-l-4 border-[#103260]' 
-                          : 'text-[#001a4d] font-normal'
-                      }`}
-                      id="subnav-hostel-refund"
-                    >
-                      <span className="font-bold mr-2 text-[#001a4d] group-hover:text-white">–</span>
-                      <span>Hostel Refund Policy</span>
-                    </a>
-                  </li>
+                <ul className="sub-menu bg-white py-1 space-y-1">
+                  {renderSubItem('hostel-details', 'Details')}
+                  {renderSubItem('hostel-refund', 'Hostel Refund Policy')}
                 </ul>
               )}
             </li>
@@ -236,17 +308,15 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </a>
             </li>
 
-            {/* Library */}
+            {/* Library Dropdown */}
             <li data-toggle="collapse" className="collapsed">
-              <a 
-                href="#"
-                onClick={(e) => { e.preventDefault(); onSelectTab('library'); }}
-                className={`w-full flex items-center justify-between px-4 py-2 transition-colors text-left group hover:bg-[#485f8b] hover:text-white ${activeTab === 'library' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
-                id="nav-library"
-              >
-                <span>Library</span>
-                <ChevronRight className="w-4 h-4 text-[#001a4d] group-hover:text-white" />
-              </a>
+              {renderDropdownHeader('Library', 'library', isLibraryActive, isLibraryExpanded)}
+              {isLibraryExpanded && (
+                <ul className="sub-menu bg-white py-1 space-y-1">
+                  {renderSubItem('library-repository', 'CU E-Repository')}
+                  {renderSubItem('library-discussion', 'Library Discussion Room Booking')}
+                </ul>
+              )}
             </li>
 
             {/* My Profile */}
@@ -297,17 +367,16 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </a>
             </li>
 
-            {/* Student Leave Application */}
+            {/* Student Leave Application Dropdown */}
             <li data-toggle="collapse" className="collapsed">
-              <a 
-                href="#"
-                onClick={(e) => { e.preventDefault(); onSelectTab('leave-application'); }}
-                className={`w-full flex items-center justify-between px-4 py-2 transition-colors text-left group hover:bg-[#485f8b] hover:text-white ${activeTab === 'leave-application' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
-                id="nav-leave-application"
-              >
-                <span>Student Leave Application</span>
-                <ChevronRight className="w-4 h-4 text-[#001a4d] group-hover:text-white" />
-              </a>
+              {renderDropdownHeader('Student Leave Application', 'leave-application', isLeaveActive, isLeaveExpanded)}
+              {isLeaveExpanded && (
+                <ul className="sub-menu bg-white py-1 space-y-1">
+                  {renderSubItem('leave-duty', 'Duty Leave')}
+                  {renderSubItem('leave-general', 'General Leave')}
+                  {renderSubItem('leave-medical', 'Medical Leave')}
+                </ul>
+              )}
             </li>
 
             {/* Student Placement */}
@@ -322,17 +391,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </a>
             </li>
 
-            {/* Student Relation Management System */}
+            {/* Student Relation Management System Dropdown */}
             <li data-toggle="collapse" className="collapsed">
-              <a 
-                href="#"
-                onClick={(e) => { e.preventDefault(); onSelectTab('srms'); }}
-                className={`w-full flex items-center justify-between px-4 py-2 transition-colors text-left group hover:bg-[#485f8b] hover:text-white ${activeTab === 'srms' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
-                id="nav-srms"
-              >
-                <span>Student Relation Management System</span>
-                <ChevronRight className="w-4 h-4 text-[#001a4d] group-hover:text-white flex-shrink-0 ml-1" />
-              </a>
+              {renderDropdownHeader('Student Relation Management System', 'srms', isSrmsActive, isSrmsExpanded)}
+              {isSrmsExpanded && (
+                <ul className="sub-menu bg-white py-1 space-y-1">
+                  {renderSubItem('srms-clubs', 'Clubs & Societies', true)}
+                  {renderSubItem('srms-event', 'Event Review')}
+                  {renderSubItem('srms-care', 'Online Student Care Center Requests')}
+                  {renderSubItem('srms-talent', 'Talent Search Program')}
+                </ul>
+              )}
             </li>
 
             {/* TPP UILAH */}
@@ -347,17 +416,16 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </a>
             </li>
 
-            {/* Transport */}
+            {/* Transport Dropdown */}
             <li data-toggle="collapse" className="collapsed">
-              <a 
-                href="#"
-                onClick={(e) => { e.preventDefault(); onSelectTab('transport'); }}
-                className={`w-full flex items-center justify-between px-4 py-2 transition-colors text-left group hover:bg-[#485f8b] hover:text-white ${activeTab === 'transport' ? 'text-[#001a4d] font-bold bg-blue-50/80' : 'text-[#001a4d]'}`}
-                id="nav-transport"
-              >
-                <span>Transport</span>
-                <ChevronRight className="w-4 h-4 text-[#001a4d] group-hover:text-white" />
-              </a>
+              {renderDropdownHeader('Transport', 'transport', isTransportActive, isTransportExpanded)}
+              {isTransportExpanded && (
+                <ul className="sub-menu bg-white py-1 space-y-1">
+                  {renderSubItem('transport-details', 'Details')}
+                  {renderSubItem('transport-consent-1', 'Transport Consent')}
+                  {renderSubItem('transport-consent-2', 'Transport Consent')}
+                </ul>
+              )}
             </li>
 
             {/* UCMC */}
